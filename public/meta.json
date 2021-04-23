@@ -1,35 +1,112 @@
 {
   "name": "portfolio",
-  "plugins": [
+  "experiences": [
     {
-      "name": "Chakra UI",
-      "description": "Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications.",
-      "url": "https://chakra-ui.com/docs/getting-started"
+      "name": "Datu tehnoloģiju grupa",
+      "image": "images/"
     },
     {
-      "name": "Styled Components",
-      "description": "Utilising tagged template literals (a recent addition to JavaScript) and the power of CSS, styled-components allows you to write actual CSS code to style your components.",
-      "url": "https://styled-components.com/docs"
+      "name": "D8Corporation",
+      "image": "images/"
     },
     {
-      "name": "react-use",
-      "description": "A Collection of useful React hooks.",
-      "url": "https://github.com/streamich/react-use"
+      "name": "Swedbank",
+      "image": "images/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "image": "images/"
     },
     {
-      "name": "next-i18next",
-      "description": "next-i18next is a plugin for Next.js projects that allows you to get translations up and running quickly and easily, while fully supporting SSR, multiple namespaces with codesplitting, etc.",
-      "url": "https://github.com/isaachinman/next-i18next"
+      "name": "CSS",
+      "image": "images/"
     },
     {
-      "name": "ESLint",
-      "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.",
-      "url": "https://eslint.org/docs/user-guide/getting-started"
+      "name": "JavaScript",
+      "image": "images/"
     },
     {
-      "name": "Docker",
-      "description": "Docker simplifies and accelerates your workflow, while giving developers the freedom to innovate with their choice of tools, application stacks, and deployment environments for each project.",
-      "url": "https://www.docker.com/get-started"
+      "name": "TypeScript",
+      "image": "images/"
+    },
+    {
+      "name": "ReactJS",
+      "image": "images/"
+    },
+    {
+      "name": "ExpressJS",
+      "image": "images/"
+    },
+    {
+      "name": "NodeJS",
+      "image": "images/"
+    },
+    {
+      "name": "MeteorJS",
+      "image": "images/"
+    },
+    {
+      "name": "MongoDB",
+      "image": "images/"
+    },
+    {
+      "name": "MySQL",
+      "image": "images/"
+    },
+    {
+      "name": "Laravel",
+      "image": "images/"
+    },
+    {
+      "name": "ServiceNow",
+      "image": "images/"
+    },
+    {
+      "name": "Shopify",
+      "image": "images/"
+    },
+    {
+      "name": "...",
+      "image": "images/"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "JDK Mārupe",
+      "description": "Latvian folk dance group's website",
+      "image": "images/jdkmarupe.jpg",
+      "technologies": ["Laravel", "JS"]
+    },
+    {
+      "id": 2,
+      "name": "Aribabox",
+      "description": "Woodworking design e-commerce store",
+      "image": "images/aribabox.jpg",
+      "technologies": ["Shopify"]
+    },
+    {
+      "id": 3,
+      "name": "Aribabox file manager",
+      "image": "images/aribabox.jpg",
+      "description": "File management system",
+      "technologies": ["Meteor"]
+    },
+    {
+      "id": 4,
+      "name": "Portfolio",
+      "description": "This portfolio",
+      "image": "images/portfolio.jpg",
+      "technologies": ["React", "NextJS", "Chakra UI"]
+    },
+    {
+      "id": 5,
+      "name": "Tikai Jaunumi",
+      "image": "images/portfolio.jpg",
+      "description": "Latvian realestate listing web application",
+      "technologies": ["React", "NextJS", "AntDesign"]
     }
   ]
 }

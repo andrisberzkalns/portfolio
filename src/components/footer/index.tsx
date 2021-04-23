@@ -1,8 +1,10 @@
 import React, { CSSProperties } from "react";
 import Image from "next/image";
-import { Flex, Center } from "@chakra-ui/react";
+import { Box, Flex, Center, useColorMode } from "@chakra-ui/react";
 
 export const Footer: React.FC = () => {
+  const { colorMode } = useColorMode();
+
   const iconStyle: CSSProperties = {
     fontSize: 22,
     color: "#fff",
@@ -10,61 +12,47 @@ export const Footer: React.FC = () => {
     marginLeft: "0.25rem",
   };
   return (
-    <Center bg="main.100" py={10}>
+    <Center bg={colorMode == 'light' ? "header.100" : "header.100"} py={10}>
       <Flex flexDirection="column">
-        <a href="https://github.com/pankod" target="_blank">
-          <Image
-            src="/icons/pankod-icon.svg"
-            alt="pankod"
-            width="140"
-            height="28"
-          />
-        </a>
         <Flex mt={5}>
-          <a href="https://github.com/pankod" target="_blank" style={iconStyle}>
-            <Image
-              src="/icons/github-icon.svg"
-              alt="github"
-              width="28"
-              height="29"
-            />
-          </a>
-          <a
-            href="https://twitter.com/PankodDev"
-            target="_blank"
-            style={iconStyle}
-          >
-            <Image
-              src="/icons/twitter-icon.svg"
-              alt="twitter"
-              width="28"
-              height="28"
-            />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCBGOeQkv1XW3ptryLWlQbAQ"
-            target="_blank"
-            style={iconStyle}
-          >
-            <Image
-              src="/icons/youtube-icon.svg"
-              alt="youtube"
-              width="28"
-              height="29"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/pankod-yazilim-ve-danismanlik/"
-            target="_blank"
-            style={iconStyle}
-          >
-            <Image
-              src="/icons/linkedin-icon.svg"
-              alt="linkedin"
-              width="28"
-              height="32"
-            />
-          </a>
+          <Box mx={1}>
+            <a href="https://github.com/andrisberzkalns" target="_blank" style={iconStyle}>
+              <Image
+                src="/icons/github-icon.svg"
+                alt="github"
+                width="28"
+                height="29"
+              />
+            </a>
+          </Box>
+          <Box mx={1}>
+            <a
+              href="https://twitter.com/BerzkalnsAndris"
+              target="_blank"
+              style={iconStyle}
+            >
+              <Image
+                src="/icons/twitter-icon.svg"
+                alt="twitter"
+                width="28"
+                height="28"
+              />
+            </a>
+          </Box>
+          <Box mx={1}>
+            <a
+              href="https://www.linkedin.com/in/andris-b-584265a5/"
+              target="_blank"
+              style={iconStyle}
+            >
+              <Image
+                src="/icons/linkedin-icon.svg"
+                alt="linkedin"
+                width="28"
+                height="32"
+              />
+            </a>
+          </Box>
         </Flex>
       </Flex>
     </Center>
