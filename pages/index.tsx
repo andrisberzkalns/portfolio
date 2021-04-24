@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import { Spacer, Flex } from "@chakra-ui/react";
 import AOS from 'aos';
 import {
+  About,
   Contact,
   Experience,
   Footer,
   Header,
   Main,
-  Skills,
-  Projects
+  Projects,
+  Skills
 } from "@components";
 import Head from "next/head";
 
@@ -25,18 +26,22 @@ const Home: React.FC = () => {
     <>
       <Head>
         <title>Andris Bērzkalns</title>
-        <link rel="shortcut icon" href="icons/github-con.svg" />
+        {/* <link rel="shortcut icon" href="icons/github-con.svg" /> */}
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Flex direction="column" minH="100vh" >
         <Header />
-        {/* TODO - Create cool landing page type graphic */}
         <Main />
-        {/* <Cards /> */}
-        <Spacer />
+
+        <About />
+        
         <Projects />
+        {/* <Offers /> */}
+
         <Skills />
         <Experience />
         <Contact />
+
         <Footer />
       </Flex>
     </>

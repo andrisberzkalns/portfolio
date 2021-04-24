@@ -7,3 +7,4 @@ export { Experience } from "./experience";
 export { Skills } from "./skills";
 export { Contact } from "./contact";
 export { SectionHeader } from "./sectionHeader";
+export { About } from "./about";

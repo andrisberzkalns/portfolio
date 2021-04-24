@@ -2,16 +2,22 @@
   "name": "portfolio",
   "experiences": [
     {
-      "name": "Datu tehnoloģiju grupa",
-      "image": "images/"
+      "name": "Swedbank",
+      "image": "images/experience/swedbank.jpg",
+      "dates": "2020 - present",
+      "description": "Primary development tasks involve work with ServiceNow - a cloud computing platform that helps companies manage digital workflows for enterprise operations."
     },
     {
       "name": "D8Corporation",
-      "image": "images/"
+      "image": "images/experience/d8.jpg",
+      "dates": "2019 - 2020",
+      "description": "Experience working in a larger, more developer oriented company. Working on banking related software. Working with JavaScript (React, Backbone, SQL)"
     },
     {
-      "name": "Swedbank",
-      "image": "images/"
+      "name": "Datu tehnoloģiju grupa",
+      "image": "images/experience/dtg.jpg",
+      "dates": "2018 - 2019",
+      "description": "Primary work tasks was to work on UI side of work time management software for construction companies. Primarily developed in JavaScript (React, Meteor, MongoDB), but at a point worked with C# for hardware integration."
     }
   ],
   "skills": [
@@ -84,7 +90,7 @@
       "id": 2,
       "name": "Aribabox",
       "description": "Woodworking design e-commerce store",
-      "image": "images/aribabox.jpg",
+      "image": "images/aribabox-website.jpg",
       "technologies": ["Shopify"]
     },
     {

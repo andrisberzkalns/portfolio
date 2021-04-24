@@ -9,7 +9,7 @@ export const Projects: React.FC = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   return (
-    <Container maxW="container.lg" centerContent id="projects">
+    <Container maxW="container.lg" centerContent id="projects" mt={20}>
       <SectionHeader>Projects</SectionHeader>
 
       {/* <AnimateSharedLayout type="crossfade">

@@ -1,14 +1,9 @@
 import React from "react";
 import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverHeader,
   useBoolean,
   Container,
   Box,
   Flex,
-  Heading,
   Tooltip,
   Text,
   useColorMode
@@ -37,8 +32,9 @@ export const Contact: React.FC = () => {
   }, [copied]);
 
   return (
-    <Container minH="calc(100vh - 100px)" minW="100%" centerContent mt={16} id="contact">
-      <SectionHeader>Contact</SectionHeader>
+    <Container minW="100%" centerContent mt={4} id="contact" pt={40} mb={80}>
+      <SectionHeader>Contact me</SectionHeader>
+      {/* <Text>Feel free to contact me at</Text> */}
       <Box mb="20px" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
         <Tooltip hasArrow label={ copied ? "Copied" : "Copy to clipboard!"} aria-label="A tooltip" loseOnClick={false}>
           <Flex
@@ -61,6 +57,7 @@ export const Contact: React.FC = () => {
             >
               berzkalns.andris@gmail.com
             </Text>
+
             <Box
               p={2}
               pl={3}
