@@ -9,7 +9,8 @@ import {
   Header,
   Main,
   Projects,
-  Skills
+  Skills,
+  SpacerImage
 } from "@components";
 import Head from "next/head";
 
@@ -40,6 +41,7 @@ const Home: React.FC = () => {
 
         <Skills />
         <Experience />
+        <SpacerImage />
         <Contact />
 
         <Footer />

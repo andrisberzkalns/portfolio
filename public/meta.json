@@ -17,7 +17,7 @@
       "name": "Datu tehnoloģiju grupa",
       "image": "images/experience/dtg.jpg",
       "dates": "2018 - 2019",
-      "description": "Primary work tasks was to work on UI side of work time management software for construction companies. Primarily developed in JavaScript (React, Meteor, MongoDB), but at a point worked with C# for hardware integration."
+      "description": "Primary work tasks was developing user interface side of the work time management software for construction companies. Primarily developed in JavaScript (React, Meteor, MongoDB), but at a point worked with C# for hardware integration."
     }
   ],
   "skills": [
@@ -83,34 +83,41 @@
       "id": 1,
       "name": "JDK Mārupe",
       "description": "Latvian folk dance group's website",
-      "image": "images/jdkmarupe.jpg",
+      "image": "images/project/jdkmarupe.jpg",
       "technologies": ["Laravel", "JS"]
     },
     {
       "id": 2,
       "name": "Aribabox",
       "description": "Woodworking design e-commerce store",
-      "image": "images/aribabox-website.jpg",
+      "image": "images/project/aribabox-website.jpg",
       "technologies": ["Shopify"]
     },
     {
       "id": 3,
-      "name": "Aribabox file manager",
-      "image": "images/aribabox.jpg",
+      "name": "Aribabox File Manager",
+      "image": "images/project/aribabox.jpg",
       "description": "File management system",
       "technologies": ["Meteor"]
     },
     {
       "id": 4,
-      "name": "Portfolio",
-      "description": "This portfolio",
-      "image": "images/portfolio.jpg",
-      "technologies": ["React", "NextJS", "Chakra UI"]
+      "name": "Aribabox Instruction Generator",
+      "image": "images/project/aribabox.jpg",
+      "description": "File management system",
+      "technologies": ["Meteor"]
     },
     {
       "id": 5,
+      "name": "Portfolio",
+      "description": "This portfolio",
+      "image": "images/project/portfolio.jpg",
+      "technologies": ["React", "NextJS", "Chakra UI"]
+    },
+    {
+      "id": 6,
       "name": "Tikai Jaunumi",
-      "image": "images/portfolio.jpg",
+      "image": "images/project/portfolio.jpg",
       "description": "Latvian realestate listing web application",
       "technologies": ["React", "NextJS", "AntDesign"]
     }

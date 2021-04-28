@@ -17,11 +17,11 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Links = [
   {label: 'Home', link: "home"}, 
-  {label: 'About me', link: "about"},
+  // {label: 'About me', link: "about"},
   {label: 'Projects', link: "projects"}, 
   {label: 'Offers', link: "offers"}, 
-  {label: 'Skills', link: "skills"}, 
-  {label: 'Experience', link: "experience"}, 
+  {label: 'Skills & Experience', link: "skills"}, 
+  // {label: 'Experience', link: "experience"}, 
   {label: 'Contact', link: "contact"}, 
 ];
 

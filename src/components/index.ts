@@ -8,3 +8,4 @@ export { Skills } from "./skills";
 export { Contact } from "./contact";
 export { SectionHeader } from "./sectionHeader";
 export { About } from "./about";
+export { SpacerImage } from "./spacerImage";

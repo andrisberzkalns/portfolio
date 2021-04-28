@@ -1,16 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import { Box, Center, useTheme, Text, Image, useColorMode } from "@chakra-ui/react";
-import { useWindowSize, useMouse } from "react-use";
+import { useWindowSize, useMouse, useOrientation } from "react-use";
 import { Button } from "@components";
 import { Link as ScrollLink } from "react-scroll";
+import { ArrowRightIcon } from "@chakra-ui/icons";
 
 export const Main: React.FC = () => {
   const theme = useTheme();
   const ref = React.useRef(null);
   const canvasRef = useRef(null);
+  const orientation = useOrientation();
   const { colorMode } = useColorMode();
   const { width, height } = useWindowSize();
   const { elX, elY } = useMouse(ref);
+
+  console.log(orientation);
 
   useEffect(() => {
     if(canvasRef.current) {
@@ -19,11 +23,23 @@ export const Main: React.FC = () => {
       canvas.width  = width;
       canvas.height = height;
 
-      context.fillStyle = 'rgba(0,0,0,0.40)';
+      
+
+      context.fillStyle = 'rgba(0,0,0,0.4)';
       context.fillRect(0, 0, context.canvas.width, context.canvas.height);  // (0,0) the top left of the canvas
       context.clearRect(elX - 150, 0, 300, context.canvas.height);
-      context.fillStyle = 'rgba(0,0,0,0.15)';
+      const grd = context.createLinearGradient(elX - 150, 0, elX + 150, 0);
+      grd.addColorStop(0, "rgba(0,0,0,0.4)");
+      grd.addColorStop(0.5, "rgba(0,0,0,0)");
+      grd.addColorStop(1, "rgba(0,0,0,0.4)");
+
+      context.fillStyle = grd;
+      // context.fillStyle = 'rgba(0,0,0,0.15)';
       context.fillRect(elX - 150, 0, 300, context.canvas.height);  // (0,0) the top left of the canvas
+      // context.fillRect(elX + 150, 0, -50, context.canvas.height);  // (0,0) the top left of the canvas
+      // context.fillStyle = 'rgba(0,0,0,0.15)';
+      // context.fillRect(elX - 100, 0, 100, context.canvas.height);  // (0,0) the top left of the canvas
+
     }
   }, [elX, elY, width, height])
 
@@ -86,6 +102,23 @@ export const Main: React.FC = () => {
               duration={500}
             >
               <Button mt={20} colorScheme="purple" variant="solid" style={{boxShadow: "0px 5px 10px #000"}}>Contact me</Button>
+            </ScrollLink>
+          </Box>
+          <Box position="absolute" bottom={20} _hover={{cursor: "pointer", transform: "translateY(5px)"}}>
+            <ScrollLink
+              activeClass="active"
+              to={'about'}
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              style={{
+                padding: 5
+              }}
+            >
+              <Center>
+                <ArrowRightIcon style={{transform: "rotate(90deg)"}} color="white" w="6" h="6"/>
+              </Center>
             </ScrollLink>
           </Box>
         </Center>

@@ -7,7 +7,7 @@ export const Skills: React.FC = () => {
 
   return (
     <Container maxW="container.lg" centerContent mt={16} id="skills">
-      <SectionHeader>Skills</SectionHeader>
+      <SectionHeader>Skills {"\&"} Experience</SectionHeader>
       <SimpleGrid columns={3} spacing={12} w="100%">
         <Box
           data-aos="zoom-in-up" 

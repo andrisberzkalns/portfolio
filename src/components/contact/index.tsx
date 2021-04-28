@@ -32,7 +32,7 @@ export const Contact: React.FC = () => {
   }, [copied]);
 
   return (
-    <Container minW="100%" centerContent mt={4} id="contact" pt={40} mb={80}>
+    <Container minW="100%" centerContent id="contact" mt={40} mb={40}>
       <SectionHeader>Contact me</SectionHeader>
       {/* <Text>Feel free to contact me at</Text> */}
       <Box mb="20px" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">

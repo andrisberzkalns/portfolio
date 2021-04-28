@@ -16,8 +16,8 @@ import data from "@public/meta.json";
 
 export const Experience: React.FC = () => {
   return (
-    <Container maxW="container.lg" centerContent mt={16} id="experience">
-      <SectionHeader>Experience</SectionHeader>
+    <Container maxW="container.lg" centerContent mt={16} mb={16} id="experience">
+      {/* <SectionHeader>Experience</SectionHeader> */}
       <Center h="100%" w="100%">
         <Box mt={8}>
           <SimpleGrid columns={1} spacing={12} px={20} py={10}>
