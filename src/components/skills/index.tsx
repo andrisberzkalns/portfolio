@@ -5,6 +5,10 @@ import data from "@public/meta.json";
 
 const ICON_SIZE = 100;
 
+const myLoader = ({ src, width, quality }) => {
+  return `/${src}?w=${width}&q=${quality || 75}`
+}
+
 export const Skills: React.FC = () => {
   const { colorMode } = useColorMode();
 
@@ -22,7 +26,7 @@ export const Skills: React.FC = () => {
             >
               <Square mx={'auto'} size={{base: ICON_SIZE / 1.5, md: ICON_SIZE}} bg={colorMode === 'light' ? '' : 'white'} borderRadius={colorMode === 'light' ? 'none' :'3xl'}>
                 {/* <Box px={ICON_SIZE} w={ICON_SIZE}> */}
-                  <Image maxW={{base: ICON_SIZE / 1.5, md: ICON_SIZE}} maxH={{base: ICON_SIZE / 1.5, sm: ICON_SIZE}} p={2} src={skill.image} alt={skill.name}/>
+                  <Image layout="fill" maxW={{base: ICON_SIZE / 1.5, md: ICON_SIZE}} maxH={{base: ICON_SIZE / 1.5, sm: ICON_SIZE}} p={2} src={skill.image} alt={skill.name}/>
                 {/* </Box> */}
               </Square>
               <Center>

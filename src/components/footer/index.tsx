@@ -10,6 +10,10 @@ const iconStyle: CSSProperties = {
   userSelect: "none",
 };
 
+const myLoader = ({ src, width, quality }) => {
+  return `/${src}?w=${width}&q=${quality || 75}`
+}
+
 export const Footer: React.FC = () => {
   const { colorMode } = useColorMode();
 

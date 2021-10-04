@@ -14,6 +14,10 @@ import { SectionHeader } from "@components";
 
 import data from "@public/meta.json";
 
+const myLoader = ({ src, width, quality }) => {
+  return `/${src}?w=${width}&q=${quality || 75}`
+}
+
 export const Experience: React.FC = () => {
   return (
     <Container maxW="container.lg" centerContent mt={16} pt={16} mb={16} id="experience">

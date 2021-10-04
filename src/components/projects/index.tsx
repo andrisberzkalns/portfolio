@@ -4,6 +4,10 @@ import { AnimateSharedLayout, AnimatePresence, motion } from "framer-motion";
 import data from "@public/meta.json";
 import { SectionHeader } from "@components";
 
+const myLoader = ({ src, width, quality }) => {
+  return `/${src}?w=${width}&q=${quality || 75}`
+}
+
 export const Projects: React.FC = () => {
 
   const [selectedId, setSelectedId] = useState(null);
@@ -43,7 +47,7 @@ export const Projects: React.FC = () => {
             {
               project.description && <Text fontSize={14} data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1) + 50}>{project.description}</Text>
             } */}
-            <Image src={project.image} boxShadow="2xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1) + 100}/>
+            <Image layout="fill" src={project.image} boxShadow="2xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1) + 100}/>
           </Box>
           </a>
         ))}
