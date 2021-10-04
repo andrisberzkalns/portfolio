@@ -47,7 +47,7 @@ export const Main: React.FC = () => {
     <>
       <Box 
         // bg="main.100"
-        h="100vh"
+        h={window.screen.height}
         w="100%"
         color="white"
         textAlign="center" 
@@ -91,7 +91,7 @@ export const Main: React.FC = () => {
                 style={{boxShadow: "0px 5px 10px #000"}}
               />
             </Center>
-            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} style={{ fontSize: theme.fontSizes["4xl"], padding: 0, margin: 0 }}>Hi, I'm Andris Bērzkalns</Text>
+            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} fontSize="4xl" px={2}>Hi, I'm Andris&nbsp;Bērzkalns</Text>
             <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"}  style={{ fontSize: theme.fontSizes["lg"] }}>
               I am a Software Engineer
             </Text>
