@@ -10,7 +10,6 @@ const config = {
   rewrites: async () => nextI18NextRewrites(localeSubpaths),
   images: {
     loader: 'imgix',
-    // path: 'https://localhost:3000/',
   },
   publicRuntimeConfig: {
     localeSubpaths,

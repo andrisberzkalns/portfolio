@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import Image from "next/image";
+import { Image } from "@chakra-ui/react";
 import { Box, Flex, Center, useColorMode } from "@chakra-ui/react";
 
 const iconStyle: CSSProperties = {
@@ -9,10 +9,6 @@ const iconStyle: CSSProperties = {
   marginLeft: "0.25rem",
   userSelect: "none",
 };
-
-const myLoader = ({ src, width, quality }) => {
-  return `/${src}?w=${width}&q=${quality || 75}`
-}
 
 export const Footer: React.FC = () => {
   const { colorMode } = useColorMode();
@@ -24,10 +20,10 @@ export const Footer: React.FC = () => {
           <Box mx={2}>
             <a href="https://github.com/andrisberzkalns" target="_blank" style={iconStyle}>
               <Image
-                src="/icons/github-icon.svg"
+                src="/icons/github-icon.png"
                 alt="github"
-                width="28"
-                height="29"
+                width="28px"
+                height="29px"
               />
             </a>
           </Box>
@@ -38,10 +34,10 @@ export const Footer: React.FC = () => {
               style={iconStyle}
             >
               <Image
-                src="/icons/twitter-icon.svg"
+                src="/icons/twitter-icon.png"
                 alt="twitter"
-                width="28"
-                height="28"
+                width="28px"
+                height="28px"
               />
             </a>
           </Box>
@@ -52,10 +48,11 @@ export const Footer: React.FC = () => {
               style={iconStyle}
             >
               <Image
-                src="/icons/linkedin-icon.svg"
+                src="/icons/linkedin-icon.png"
+                layout="fill"
                 alt="linkedin"
-                width="28"
-                height="32"
+                width="28px"
+                height="32px"
               />
             </a>
           </Box>

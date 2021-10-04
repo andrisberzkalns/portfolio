@@ -7,10 +7,6 @@ import { ArrowRightIcon } from "@chakra-ui/icons";
 
 const LIGHT_SIZE = 900;
 
-const myLoader = ({ src, width, quality }) => {
-  return `/${src}?w=${width}&q=${quality || 75}`
-}
-
 export const Main: React.FC = () => {
   const theme = useTheme();
   const ref = React.useRef(null);
