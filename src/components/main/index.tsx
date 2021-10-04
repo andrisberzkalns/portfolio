@@ -87,7 +87,7 @@ export const Main: React.FC = () => {
                 boxSize="150px"
                 layout="fill"
                 src="/images/profile-img-color.jpg"
-                alt="Andris Bērzkalns"
+                alt="Profile image of Andris Bērzkalns"
                 style={{boxShadow: "0px 5px 10px #000"}}
               />
             </Center>

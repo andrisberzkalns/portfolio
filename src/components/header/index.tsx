@@ -101,6 +101,7 @@ export const Header: React.FC = () => {
                 colorScheme="black"
                 cursor={'pointer'}
                 onChange={toggleColorMode}
+                type="checkbox"
                 >
               </Switch>
               {/* <MenuList>

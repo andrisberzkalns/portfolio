@@ -37,21 +37,6 @@ export const Skills: React.FC = () => {
             </Box>
           </>
         ))}
-        {/* {(data?.skills ?? []).map((skill, index) => (
-          <Box
-            key={skill.name} 
-            data-aos="zoom-in-up" 
-            data-aos-duration="500" 
-            data-aos-delay={150 * ((index % 4) + 1)} 
-          >
-            <Center>
-              <Heading fontSize={16} fontWeight="500" py={5}>
-                {skill.name}
-              </Heading>
-            </Center>
-            <Image src={skill.image} boxShadow="lg" />
-          </Box>
-        ))} */}
       </SimpleGrid>
     </Container>
   );

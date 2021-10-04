@@ -1,4 +1,4 @@
-import Document, { DocumentContext, DocumentInitialProps } from "next/document";
+import Document, { DocumentContext, DocumentInitialProps, Html } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 class CustomDocument extends Document {
@@ -17,10 +17,10 @@ class CustomDocument extends Document {
       return {
         ...initialProps,
         styles: (
-          <>
+          <Html lang="en">
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
+          </Html>
         ),
       };
     } finally {

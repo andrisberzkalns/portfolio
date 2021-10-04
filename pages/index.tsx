@@ -29,6 +29,9 @@ const Home: React.FC = () => {
         <title>Andris Bērzkalns</title>
         {/* <link rel="shortcut icon" href="icons/github-con.svg" /> */}
         <link rel="shortcut icon" href="/favicon.png" />
+        <meta name="description" content="Web development portfolio page of Andris Bērzkalns" />
+        <meta name="keywords" content="Web development, Portfolio" />
+        <meta name="author" content="Andris Bērzkalns" />
       </Head>
       <Flex direction="column" minH="100vh" >
         <Header />
