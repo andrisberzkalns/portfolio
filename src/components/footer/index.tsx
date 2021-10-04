@@ -2,20 +2,22 @@ import React, { CSSProperties } from "react";
 import Image from "next/image";
 import { Box, Flex, Center, useColorMode } from "@chakra-ui/react";
 
+const iconStyle: CSSProperties = {
+  fontSize: 22,
+  color: "#fff",
+  marginRight: "0.25rem",
+  marginLeft: "0.25rem",
+  userSelect: "none",
+};
+
 export const Footer: React.FC = () => {
   const { colorMode } = useColorMode();
 
-  const iconStyle: CSSProperties = {
-    fontSize: 22,
-    color: "#fff",
-    marginRight: "0.25rem",
-    marginLeft: "0.25rem",
-  };
   return (
-    <Center bg={colorMode == 'light' ? "header.100" : "header.100"} py={10}>
+    <Center bg={colorMode === 'light' ? "header.100" : 'black'} py={10}>
       <Flex flexDirection="column">
         <Flex mt={5}>
-          <Box mx={1}>
+          <Box mx={2}>
             <a href="https://github.com/andrisberzkalns" target="_blank" style={iconStyle}>
               <Image
                 src="/icons/github-icon.svg"
@@ -25,7 +27,7 @@ export const Footer: React.FC = () => {
               />
             </a>
           </Box>
-          <Box mx={1}>
+          <Box mx={2}>
             <a
               href="https://twitter.com/BerzkalnsAndris"
               target="_blank"
@@ -39,7 +41,7 @@ export const Footer: React.FC = () => {
               />
             </a>
           </Box>
-          <Box mx={1}>
+          <Box mx={2}>
             <a
               href="https://www.linkedin.com/in/andris-b-584265a5/"
               target="_blank"

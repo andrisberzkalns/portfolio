@@ -5,16 +5,16 @@ import { Button } from "@components";
 import { Link as ScrollLink } from "react-scroll";
 import { ArrowRightIcon } from "@chakra-ui/icons";
 
+const LIGHT_SIZE = 900;
+
 export const Main: React.FC = () => {
   const theme = useTheme();
   const ref = React.useRef(null);
   const canvasRef = useRef(null);
-  const orientation = useOrientation();
+  // const orientation = useOrientation();
   const { colorMode } = useColorMode();
   const { width, height } = useWindowSize();
   const { elX, elY } = useMouse(ref);
-
-  console.log(orientation);
 
   useEffect(() => {
     if(canvasRef.current) {
@@ -27,15 +27,15 @@ export const Main: React.FC = () => {
 
       context.fillStyle = 'rgba(0,0,0,0.4)';
       context.fillRect(0, 0, context.canvas.width, context.canvas.height);  // (0,0) the top left of the canvas
-      context.clearRect(elX - 150, 0, 300, context.canvas.height);
-      const grd = context.createLinearGradient(elX - 150, 0, elX + 150, 0);
+      context.clearRect(elX - (LIGHT_SIZE / 2), 0, LIGHT_SIZE, context.canvas.height);
+      const grd = context.createLinearGradient(elX - (LIGHT_SIZE / 2), 0, elX + (LIGHT_SIZE / 2), 0);
       grd.addColorStop(0, "rgba(0,0,0,0.4)");
       grd.addColorStop(0.5, "rgba(0,0,0,0)");
       grd.addColorStop(1, "rgba(0,0,0,0.4)");
 
       context.fillStyle = grd;
       // context.fillStyle = 'rgba(0,0,0,0.15)';
-      context.fillRect(elX - 150, 0, 300, context.canvas.height);  // (0,0) the top left of the canvas
+      context.fillRect(elX - (LIGHT_SIZE / 2), 0, LIGHT_SIZE, context.canvas.height);  // (0,0) the top left of the canvas
       // context.fillRect(elX + 150, 0, -50, context.canvas.height);  // (0,0) the top left of the canvas
       // context.fillStyle = 'rgba(0,0,0,0.15)';
       // context.fillRect(elX - 100, 0, 100, context.canvas.height);  // (0,0) the top left of the canvas
@@ -77,6 +77,7 @@ export const Main: React.FC = () => {
         >
           {/* <polygon fill="white" points="0,100 50,0 100,100"/> */}
           <polygon fill={colorMode == 'light' ? "white" : "rgb(26,32,44)" } points="0,0 50,100 100,0 100,100 0,100 0,0"/>
+          {/* <polygon fill={"white"} points="0,0 50,100 100,0 100,100 0,100 0,0"/> */}
         </svg>
         <Center h="100%">
           <Box data-aos="zoom-in">
@@ -89,9 +90,9 @@ export const Main: React.FC = () => {
                 style={{boxShadow: "0px 5px 10px #000"}}
               />
             </Center>
-            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} style={{ fontSize: theme.fontSizes["4xl"], padding: 0, margin: 0 }}>Hi, my name is Andris Bērzkalns</Text>
+            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} style={{ fontSize: theme.fontSizes["4xl"], padding: 0, margin: 0 }}>Hi, I'm Andris Bērzkalns</Text>
             <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"}  style={{ fontSize: theme.fontSizes["lg"] }}>
-              I am a Software Engineer / Full-Stack Web Developer.
+              I am a Software Engineer
             </Text>
             <ScrollLink
               activeClass="active"
@@ -101,10 +102,10 @@ export const Main: React.FC = () => {
               offset={-70}
               duration={500}
             >
-              <Button mt={20} colorScheme="purple" variant="solid" style={{boxShadow: "0px 5px 10px #000"}}>Contact me</Button>
+              <Button mt={5} bg={'purple'} _hover={{background: "white", color: "black"}} variant="solid" style={{boxShadow: "0px 5px 10px #000"}}>Contact me</Button>
             </ScrollLink>
           </Box>
-          <Box position="absolute" bottom={20} _hover={{cursor: "pointer", transform: "translateY(5px)"}}>
+          {/* <Box position="absolute" bottom={{base: 0, sm: 20}} _hover={{cursor: "pointer", transform: "translateY(5px)"}}>
             <ScrollLink
               activeClass="active"
               to={'about'}
@@ -120,7 +121,7 @@ export const Main: React.FC = () => {
                 <ArrowRightIcon style={{transform: "rotate(90deg)"}} color="white" w="6" h="6"/>
               </Center>
             </ScrollLink>
-          </Box>
+          </Box> */}
         </Center>
       </Box>
     </>

@@ -9,7 +9,7 @@ export const Projects: React.FC = () => {
   const [selectedId, setSelectedId] = useState(null);
 
   return (
-    <Container maxW="container.lg" centerContent id="projects" mt={20}>
+    <Container maxW="container.lg" centerContent id="projects" mb={32} pt={16} mt={2}>
       <SectionHeader>Projects</SectionHeader>
 
       {/* <AnimateSharedLayout type="crossfade">
@@ -33,17 +33,19 @@ export const Projects: React.FC = () => {
         </AnimatePresence>
       </AnimateSharedLayout> */}
 
-      <SimpleGrid columns={2} spacing={12} px={20} py={10}>
+      <SimpleGrid columns={{base: 1, md: 2}} spacing={12} px={{base: 2, md: 20}} my={20}>
         {(data?.projects ?? []).map((project, index) => (
+          <a href={project.url} target={'_blank'}>
           <Box key={project.name}>
-            <Heading fontSize={16} fontWeight="500" py={5} data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1)} >
+            {/* <Heading fontSize={16} fontWeight="500" py={5} data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1)} >
               {project.name}
             </Heading>
             {
               project.description && <Text fontSize={14} data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1) + 50}>{project.description}</Text>
-            }
-            <Image src={project.image} h="300" boxShadow="lg" data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1) + 100}/>
+            } */}
+            <Image src={project.image} boxShadow="2xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1) + 100}/>
           </Box>
+          </a>
         ))}
       </SimpleGrid>
     </Container>

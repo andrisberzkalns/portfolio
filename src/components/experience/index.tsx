@@ -16,19 +16,22 @@ import data from "@public/meta.json";
 
 export const Experience: React.FC = () => {
   return (
-    <Container maxW="container.lg" centerContent mt={16} mb={16} id="experience">
-      {/* <SectionHeader>Experience</SectionHeader> */}
+    <Container maxW="container.lg" centerContent mt={16} pt={16} mb={16} id="experience">
+      <SectionHeader>Experience</SectionHeader>
       <Center h="100%" w="100%">
         <Box mt={8}>
-          <SimpleGrid columns={1} spacing={12} px={20} py={10}>
+          <SimpleGrid columns={1} spacing={12} px={{base: 2, md: 20}} py={10}>
             {(data?.experiences ?? []).map((experience, index) => (
               <>
-                <Flex data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay={150 * index}>
+                <Box display={{base: 'block', md: 'flex'}} data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay={150 * index}>
                   <Image w={150} h={150} src={experience.image} alt={experience.name} mr={8} />
                   <Box key={experience.name} >
-                    <Heading fontSize={18} fontWeight="500" py={5}>
+                    <Heading fontSize={18} fontWeight="500">
                       {experience.name}
                     </Heading>
+                    <Text>
+                      {experience.position}
+                    </Text>
                     <Text>
                       {experience.dates}
                     </Text>
@@ -36,7 +39,7 @@ export const Experience: React.FC = () => {
                       {experience.description}
                     </Text>
                   </Box>
-                </Flex>
+                </Box>
                 {index !== data.experiences.length - 1 && <Divider variant="solid"/>}
               </>
             ))}

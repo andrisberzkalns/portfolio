@@ -16,12 +16,12 @@ import { useWindowScroll, useWindowSize } from 'react-use';
 import { Link as ScrollLink } from "react-scroll";
 
 const Links = [
-  {label: 'Home', link: "home"}, 
-  // {label: 'About me', link: "about"},
+  // {label: 'Home', link: "home"}, 
+  {label: 'About me', link: "about"},
+  {label: 'Skills', link: "skills"}, 
+  {label: 'Experience', link: "experience"}, 
   {label: 'Projects', link: "projects"}, 
-  {label: 'Offers', link: "offers"}, 
-  {label: 'Skills & Experience', link: "skills"}, 
-  // {label: 'Experience', link: "experience"}, 
+  // {label: 'Offers', link: "offers"}, 
   {label: 'Contact', link: "contact"}, 
 ];
 
@@ -45,6 +45,9 @@ const NavLink = ({ children, link }: { children: ReactNode, link: string }) => {
           textDecoration: 'none',
           color: (colorMode == 'light' ? "gray.300" : "gray.400")
         }}
+        style={{
+          userSelect: "none"
+        }}
         // href={link}
       >
         {children}
@@ -63,7 +66,7 @@ export const Header: React.FC = () => {
   return (
     <>
       <Box
-        bg={y >= (height - 100) ? (colorMode == 'light' ? "main.100" : "main.100") : "rgba(0,0,0,0)"}
+        bg={y >= (height - 100) ? (colorMode == 'light' ? "main.100" : "black") : "rgba(0,0,0,0)"}
         px={4}
         position="fixed"
         w="100%"
@@ -74,7 +77,8 @@ export const Header: React.FC = () => {
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            colorScheme={colorMode == 'light' ? "black" : "gray"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon w={'60%'} h={'60%'} />}
             aria-label={'Open Menu'}
             display={{ md: !isOpen ? 'none' : 'inherit' }}
             onClick={isOpen ? onClose : onOpen}
@@ -94,6 +98,7 @@ export const Header: React.FC = () => {
             <Menu>
               <Switch
                 size="lg"
+                colorScheme="black"
                 cursor={'pointer'}
                 onChange={toggleColorMode}
                 >

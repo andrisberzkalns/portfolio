@@ -29,6 +29,7 @@ const SpacerImage: React.FC = () => {
         }}
       >
         {/* <polygon fill={colorMode == 'light' ? "white" : "rgb(26,32,44)" } points="0,0 0,100 50,0 100,0 100,100 50, 0"/> */}
+        {/* <polygon fill={"white"} points="0,0 50,100 100,0"/> */}
         <polygon fill={colorMode == 'light' ? "white" : "rgb(26,32,44)" } points="0,0 50,100 100,0"/>
       </svg>
       <svg
@@ -42,6 +43,7 @@ const SpacerImage: React.FC = () => {
           height: "100px"
         }}
       >
+        {/* <polygon fill={"white"} points="0,0 50,100 100,0 100,100 0,100"/> */}
         <polygon fill={colorMode == 'light' ? "white" : "rgb(26,32,44)" } points="0,0 50,100 100,0 100,100 0,100"/>
       </svg>
     </Box>
