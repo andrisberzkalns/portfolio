@@ -18,7 +18,12 @@ export const Footer: React.FC = () => {
       <Flex flexDirection="column">
         <Flex mt={5}>
           <Box mx={2}>
-            <a href="https://github.com/andrisberzkalns" target="_blank" style={iconStyle}>
+            <a
+              href="https://github.com/andrisberzkalns"
+              target="_blank"
+              style={iconStyle}
+              rel="noreferrer"
+            >
               <Image
                 src="/icons/github-icon.png"
                 alt="github"
@@ -32,6 +37,7 @@ export const Footer: React.FC = () => {
               href="https://twitter.com/BerzkalnsAndris"
               target="_blank"
               style={iconStyle}
+              rel="noreferrer"
             >
               <Image
                 src="/icons/twitter-icon.png"
@@ -46,6 +52,7 @@ export const Footer: React.FC = () => {
               href="https://www.linkedin.com/in/andris-b-584265a5/"
               target="_blank"
               style={iconStyle}
+              rel="noreferrer"
             >
               <Image
                 src="/icons/linkedin-icon.png"

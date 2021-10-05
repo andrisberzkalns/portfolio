@@ -48,7 +48,7 @@ const NavLink = ({ children, link }: { children: ReactNode, link: string }) => {
         style={{
           userSelect: "none"
         }}
-        // href={link}
+        href={link}
       >
         {children}
       </Link>
@@ -96,8 +96,13 @@ export const Header: React.FC = () => {
           </HStack>
           <Flex alignItems={'center'}>
             <Menu>
+              <label htmlFor="color-mode">
+                Toggle color mode
+              </label>
               <Switch
+                id="color-mode"
                 size="lg"
+                ml={2}
                 colorScheme="black"
                 cursor={'pointer'}
                 onChange={toggleColorMode}

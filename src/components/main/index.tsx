@@ -47,7 +47,7 @@ export const Main: React.FC = () => {
     <>
       <Box 
         // bg="main.100"
-        h={window.screen.height}
+        h="100vh"
         w="100%"
         color="white"
         textAlign="center" 
