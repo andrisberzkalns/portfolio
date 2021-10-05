@@ -5,10 +5,6 @@ import data from "@public/meta.json";
 
 const ICON_SIZE = 100;
 
-const myLoader = ({ src, width, quality }) => {
-  return `/${src}?w=${width}&q=${quality || 75}`
-}
-
 export const Skills: React.FC = () => {
   const { colorMode } = useColorMode();
 
