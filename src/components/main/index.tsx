@@ -57,7 +57,7 @@ export const Main: React.FC = () => {
           position: "relative",
           backgroundColor: "rgba(0,0,0,1)"
         }}
-        bgImage="url('/images/main-img.jpg')"
+        bgImage="url('/images/main-img-compressed.jpg')"
         bgPosition="center"
         bgRepeat="no-repeat"
         bgAttachment="fixed"

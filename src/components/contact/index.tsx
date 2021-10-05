@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
             position: "relative",
             backgroundColor: "rgba(0,0,0,1)"
           }}
-          bgImage="url('/images/main-img.jpg')"
+          bgImage="url('/images/main-img-compressed.jpg')"
           bgPosition="center"
           bgRepeat="no-repeat"
           bgAttachment="fixed"
@@ -44,7 +44,7 @@ export const Contact: React.FC = () => {
             style={{
               width: "100%",
               height: "100%",
-              backgroundColor: "rgba(0,0,0,0.4)"
+              backgroundColor: "rgba(0,0,0,0.3)"
             }}
           ></div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"
@@ -83,7 +83,7 @@ export const Contact: React.FC = () => {
                     style={{
                       userSelect: "none"
                     }}
-                  >Your email address</FormLabel>
+                  >Your email</FormLabel>
                   <Input bg={'white'} color={'black'} type="email" name="email"/>
                   <ValidationError 
                     prefix="Email" 

@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
     <Center bg={colorMode === 'light' ? "header.100" : 'black'} py={10}>
       <Flex flexDirection="column">
         <Flex mt={5}>
-          <Box mx={2}>
+          <Box mx={4}>
             <a
               href="https://github.com/andrisberzkalns"
               target="_blank"
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
               />
             </a>
           </Box>
-          <Box mx={2}>
+          <Box mx={4}>
             <a
               href="https://twitter.com/BerzkalnsAndris"
               target="_blank"
@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
               />
             </a>
           </Box>
-          <Box mx={2}>
+          <Box mx={4}>
             <a
               href="https://www.linkedin.com/in/andris-b-584265a5/"
               target="_blank"
