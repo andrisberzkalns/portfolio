@@ -73,7 +73,7 @@ export const Contact: React.FC = () => {
           }}>
           <Container minW="100%" centerContent id="contact" style={{position: 'absolute', zIndex: 10}} pt={16}>
             <SectionHeader isLight={true}>Contact me</SectionHeader>
-            <Box w={{base: '80%', sm: 400}} my={10} data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <Box w={{base: '80%', sm: 400}} my={10} data-aos="fade-up" data-aos-duration="500" data-aos-delay="0">
               {
                 state.succeeded && <Text color={'white'}>Message sent!</Text>
               }

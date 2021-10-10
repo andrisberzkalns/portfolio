@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                 src="/icons/github-icon.png"
                 alt="github"
                 width="28px"
-                height="29px"
+                height="28px"
               />
             </a>
           </Box>
@@ -59,7 +59,7 @@ export const Footer: React.FC = () => {
                 layout="fill"
                 alt="linkedin"
                 width="28px"
-                height="32px"
+                height="28px"
               />
             </a>
           </Box>

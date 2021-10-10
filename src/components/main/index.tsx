@@ -55,7 +55,8 @@ export const Main: React.FC = () => {
         id="home"
         style={{
           position: "relative",
-          backgroundColor: "rgba(0,0,0,1)"
+          backgroundColor: "rgba(0,0,0,1)",
+          backgroundSize: `auto ${window.screen.height}`
         }}
         bgImage="url('/images/main-img-compressed.jpg')"
         bgPosition="center"
@@ -91,9 +92,9 @@ export const Main: React.FC = () => {
                 style={{boxShadow: "0px 5px 10px #000"}}
               />
             </Center>
-            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} fontSize="4xl" px={2}>Hi, I'm Andris&nbsp;Bērzkalns</Text>
-            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"}  style={{ fontSize: theme.fontSizes["lg"] }}>
-              I am a Software Engineer
+            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} fontSize="4xl" px={2} pt={2} mb={2}>Hi, I'm Andris&nbsp;Bērzkalns</Text>
+            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} style={{ fontSize: theme.fontSizes["lg"] }}>
+              I'm a Software Engineer
             </Text>
             <ScrollLink
               activeClass="active"
