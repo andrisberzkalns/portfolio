@@ -11,12 +11,7 @@ import {
   Image
 } from "@chakra-ui/react";
 import { SectionHeader } from "@components";
-
 import data from "@public/meta.json";
-
-const myLoader = ({ src, width, quality }) => {
-  return `/${src}?w=${width}&q=${quality || 75}`
-}
 
 export const Experience: React.FC = () => {
   return (
