@@ -26,9 +26,9 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Andris Bērzkalns</title>
+        <title>Web Developer - Andris Bērzkalns</title>
         <link rel="shortcut icon" href="/favicon.png" />
-        <meta name="description" content="Web development portfolio page of Andris Bērzkalns" />
+        <meta name="description" content="Full stack web developer that will make the website that you desire! Check out my portfolio and let's get in contact!" />
         <meta name="keywords" content="Web development, Portfolio" />
         <meta name="author" content="Andris Bērzkalns" />
         <meta name="theme-color" content="#282c34"/>
