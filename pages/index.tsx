@@ -36,7 +36,7 @@ const Home: React.FC = () => {
       <Flex direction="column" minH="100vh" >
         <Header />
         <Main />
-        <About />
+        {/* <About /> */}
         {/* <Offers /> */}
         <Skills />
         {/* <SpacerImage /> */}

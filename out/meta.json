@@ -105,6 +105,14 @@
       "url": "https://www.jdkmarupe.lv/",
       "image": "images/project/jdkmarupe.jpg",
       "technologies": ["Laravel", "JS"]
+    },
+    {
+      "id": 3,
+      "name": "Vārdulis",
+      "description": "Latvian \"Wordle\" clone",
+      "url": "https://vardulis.lv/",
+      "image": "images/project/vardulis.jpg",
+      "technologies": ["Expo.dev"]
     }
   ]
 }

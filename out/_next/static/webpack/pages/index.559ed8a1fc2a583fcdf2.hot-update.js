@@ -1,0 +1,15 @@
+webpackHotUpdate_N_E("pages/index",{
+
+/***/ "./public/meta.json":
+/*!**************************!*\
+  !*** ./public/meta.json ***!
+  \**************************/
+/*! exports provided: name, experiences, skills, projects, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"name\":\"portfolio\",\"experiences\":[{\"name\":\"Swedbank\",\"position\":\"Software Engineer\",\"image\":\"images/experience/swedbank.jpg\",\"dates\":\"2020 - present\",\"description\":\"Work with ServiceNow - a cloud computing platform that helps companies manage digital workflows for enterprise operations.\"},{\"name\":\"D8Corporation\",\"position\":\"Programmer\",\"image\":\"images/experience/d8.jpg\",\"dates\":\"2019 - 2020\",\"description\":\"Banking related software development in WEB frameworks (NodeJS, Backbone).\"},{\"name\":\"Datu tehnoloģiju grupa\",\"position\":\"Programming Technician\",\"image\":\"images/experience/dtg.jpg\",\"dates\":\"2018 - 2019\",\"description\":\"User interface and server-side development. Primarily developed in JavaScript (React, Meteor, MongoDB). Hardware integration for facial recognition hardware in C#.\"}],\"skills\":[{\"name\":\"HTML\",\"image\":\"images/skills/html.png\"},{\"name\":\"CSS\",\"image\":\"images/skills/css.png\"},{\"name\":\"JavaScript\",\"image\":\"images/skills/js.png\"},{\"name\":\"TypeScript\",\"image\":\"images/skills/ts.png\"},{\"name\":\"ReactJS\",\"image\":\"images/skills/react.png\"},{\"name\":\"NextJS\",\"image\":\"images/skills/nextjs.png\"},{\"name\":\"Shopify\",\"image\":\"images/skills/shopify.png\"},{\"name\":\"ServiceNow\",\"image\":\"images/skills/servicenow.png\"},{\"name\":\"ExpressJS\",\"image\":\"images/skills/expressjs.png\"},{\"name\":\"NodeJS\",\"image\":\"images/skills/node.png\"},{\"name\":\"MeteorJS\",\"image\":\"images/skills/meteor.png\"},{\"name\":\"MongoDB\",\"image\":\"images/skills/mongodb.png\"},{\"name\":\"MySQL\",\"image\":\"images/skills/mysql.png\"},{\"name\":\"GitHub\",\"image\":\"images/skills/github.png\"},{\"name\":\"Adobe Photoshop\",\"image\":\"images/skills/ps.png\"},{\"name\":\"Adobe Illustrator\",\"image\":\"images/skills/ai.png\"}],\"projects\":[{\"id\":1,\"name\":\"Aribabox\",\"description\":\"Woodworking design e-commerce store\",\"url\":\"https://www.aribabox.com/\",\"image\":\"images/project/aribabox-website.jpg\",\"technologies\":[\"Shopify\"]},{\"id\":2,\"name\":\"JDK Mārupe\",\"description\":\"Latvian folk dance group's website\",\"url\":\"https://www.jdkmarupe.lv/\",\"image\":\"images/project/jdkmarupe.jpg\",\"technologies\":[\"Laravel\",\"JS\"]},{\"id\":3,\"name\":\"Vārdulis\",\"description\":\"Latvian \\\"Wordle\\\" clone\",\"url\":\"https://vardulis.lv/\",\"image\":\"images/project/vardulis.jpg\",\"technologies\":[\"Expo.dev\"]}]}");
+
+/***/ })
+
+})
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdGF0aWMvd2VicGFjay9wYWdlcy9pbmRleC41NTllZDhhMWZjMmE1ODNmY2RmMi5ob3QtdXBkYXRlLmpzIiwic291cmNlUm9vdCI6IiJ9
