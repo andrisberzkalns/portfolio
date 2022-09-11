@@ -57,12 +57,12 @@
       "image": "images/skills/servicenow.png"
     },
     {
-      "name": "ExpressJS",
-      "image": "images/skills/expressjs.png"
-    },
-    {
       "name": "NodeJS",
       "image": "images/skills/node.png"
+    },
+    {
+      "name": "Firebase",
+      "image": "images/skills/firebase.png"
     },
     {
       "name": "MeteorJS",

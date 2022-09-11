@@ -13,8 +13,8 @@ export const Projects: React.FC = () => {
       <SectionHeader>Projects</SectionHeader>
       <SimpleGrid columns={{base: 1, md: 2}} spacing={12} px={{base: 2, md: 20}} my={20}>
         {(data?.projects ?? []).map((project, index) => (
-          <a href={project.url} target={'_blank'} rel="noreferrer">
-          <Box key={project.name}>
+          <a  key={project.name} href={project.url} target={'_blank'} rel="noreferrer">
+          <Box>
             <Image rounded={'xl'} alt={project.name} layout="fill" src={project.image} boxShadow="xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1) + 100}/>
           </Box>
           </a>

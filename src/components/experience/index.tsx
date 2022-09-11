@@ -21,8 +21,8 @@ export const Experience: React.FC = () => {
         <Box mt={8}>
           <SimpleGrid columns={1} spacing={4} px={{base: 2, md: 20}} py={10}>
             {(data?.experiences ?? []).map((experience, index) => (
-              <>
-                <Box p={8} display={{base: 'block', md: 'flex'}} data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay={150 * index}>
+              <Box key={experience.name}>
+                <Box py={4} display={{base: 'block', md: 'flex'}} data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay={150 * index}>
                   <Box rounded={'xl'} w="100%" maxH={150} bg="white" display={{base: 'block', md: 'none'}}>
                     <Center>
                       <Image p={4} layout="fill" maxH={150} src={experience.image} alt={experience.name} mr={{base: 0, md: 8}} />
@@ -40,7 +40,7 @@ export const Experience: React.FC = () => {
                       </Heading> */}
                       <Text mb={2}>
                         <b style={{'textTransform': 'uppercase'}}>{experience.position}</b>
-                        <Box display={{base: 'box', sm: 'inline'}} ml={{base: 0, sm: 2}}><i>(&nbsp;{experience.dates}&nbsp;)</i></Box>
+                        &ensp;<span style={{whiteSpace: "nowrap"}}><i style={{whiteSpace: "nowrap"}}>(&nbsp;{experience.dates}&nbsp;)</i></span>
                       </Text>
                       <Text>
                         {experience.description}
@@ -49,7 +49,7 @@ export const Experience: React.FC = () => {
                   </Center>
                 </Box>
                 {index !== data.experiences.length - 1 && <Divider variant="solid" colorScheme={'gray'} size={'md'}/>}
-              </>
+              </Box>
             ))}
           </SimpleGrid>
         </Box>

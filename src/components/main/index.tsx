@@ -92,9 +92,9 @@ export const Main: React.FC = () => {
                 style={{boxShadow: "0px 5px 10px #000"}}
               />
             </Center>
-            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} fontSize="4xl" px={2} pt={2} mb={2}>Hi, I'm Andris&nbsp;Bērzkalns</Text>
+            <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} fontSize="4xl" px={2} pt={2} mb={2}>Andris&nbsp;Bērzkalns</Text>
             <Text textShadow="0px 5px 10px #000" fontWeight={"bolder"} style={{ fontSize: theme.fontSizes["lg"] }}>
-              I'm a Software Engineer
+              Software&nbsp;Engineer
             </Text>
             <ScrollLink
               activeClass="active"
