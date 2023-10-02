@@ -1,118 +1,134 @@
 {
-  "name": "portfolio",
-  "experiences": [
-    {
-      "name": "Swedbank",
-      "position": "Software Engineer",
-      "image": "images/experience/swedbank.jpg",
-      "dates": "2020 - present",
-      "description": "Work with ServiceNow - a cloud computing platform that helps companies manage digital workflows for enterprise operations."
-    },
-    {
-      "name": "D8Corporation",
-      "position": "Programmer",
-      "image": "images/experience/d8.jpg",
-      "dates": "2019 - 2020",
-      "description": "Banking related software development in WEB frameworks (NodeJS, Backbone)."
-    },
-    {
-      "name": "Datu tehnoloģiju grupa",
-      "position": "Programming Technician",
-      "image": "images/experience/dtg.jpg",
-      "dates": "2018 - 2019",
-      "description": "User interface and server-side development. Primarily developed in JavaScript (React, Meteor, MongoDB). Hardware integration for facial recognition hardware in C#."
-    }
-  ],
-  "skills": [
-    {
-      "name": "HTML",
-      "image": "images/skills/html.png"
-    },
-    {
-      "name": "CSS",
-      "image": "images/skills/css.png"
-    },
-    {
-      "name": "JavaScript",
-      "image": "images/skills/js.png"
-    },
-    {
-      "name": "TypeScript",
-      "image": "images/skills/ts.png"
-    },
-    {
-      "name": "ReactJS",
-      "image": "images/skills/react.png"
-    },
-    {
-      "name": "NextJS",
-      "image": "images/skills/nextjs.png"
-    },
-    {
-      "name": "Shopify",
-      "image": "images/skills/shopify.png"
-    },
-    {
-      "name": "ServiceNow",
-      "image": "images/skills/servicenow.png"
-    },
-    {
-      "name": "NodeJS",
-      "image": "images/skills/node.png"
-    },
-    {
-      "name": "Firebase",
-      "image": "images/skills/firebase.png"
-    },
-    {
-      "name": "MeteorJS",
-      "image": "images/skills/meteor.png"
-    },
-    {
-      "name": "MongoDB",
-      "image": "images/skills/mongodb.png"
-    },
-    {
-      "name": "MySQL",
-      "image": "images/skills/mysql.png"
-    },
-    {
-      "name": "GitHub",
-      "image": "images/skills/github.png"
-    },
-    {
-      "name": "Adobe Photoshop",
-      "image": "images/skills/ps.png"
-    },
-    {
-      "name": "Adobe Illustrator",
-      "image": "images/skills/ai.png"
-    }
-  ],
-  "projects": [
-    {
-      "id": 1,
-      "name": "Aribabox",
-      "description": "Woodworking design e-commerce store",
-      "url": "https://www.aribabox.com/",
-      "image": "images/project/aribabox-website.jpg",
-      "technologies": ["Shopify"]
-    },
-    {
-      "id": 2,
-      "name": "JDK Mārupe",
-      "description": "Latvian folk dance group's website",
-      "url": "https://www.jdkmarupe.lv/",
-      "image": "images/project/jdkmarupe.jpg",
-      "technologies": ["Laravel", "JS"]
-    },
-    {
-      "id": 3,
-      "name": "Vārdulis",
-      "description": "Latvian \"Wordle\" clone",
-      "url": "https://vardulis.lv/",
-      "image": "images/project/vardulis.jpg",
-      "technologies": ["Expo.dev"]
-    }
-  ]
+	"name": "portfolio",
+	"experiences": [
+		{
+			"name": "Swedbank",
+			"position": "Software Engineer",
+			"image": "images/experience/swedbank.jpg",
+			"dates": "2020 - present",
+			"description": "Work with ServiceNow - a cloud computing platform that helps companies manage digital workflows for enterprise operations."
+		},
+		{
+			"name": "D8Corporation",
+			"position": "Programmer",
+			"image": "images/experience/d8.jpg",
+			"dates": "2019 - 2020",
+			"description": "Banking related software development in WEB frameworks (NodeJS, Backbone)."
+		},
+		{
+			"name": "Datu tehnoloģiju grupa",
+			"position": "Programming Technician",
+			"image": "images/experience/dtg.jpg",
+			"dates": "2018 - 2019",
+			"description": "User interface and server-side development. Primarily developed in JavaScript (React, Meteor, MongoDB). Hardware integration for facial recognition hardware in C#."
+		}
+	],
+	"skills": [
+		{
+			"name": "HTML",
+			"image": "images/skills/html.png"
+		},
+		{
+			"name": "CSS",
+			"image": "images/skills/css.png"
+		},
+		{
+			"name": "JavaScript",
+			"image": "images/skills/js.png"
+		},
+		{
+			"name": "TypeScript",
+			"image": "images/skills/ts.png"
+		},
+		{
+			"name": "ReactJS",
+			"image": "images/skills/react.png"
+		},
+		{
+			"name": "NextJS",
+			"image": "images/skills/nextjs.png"
+		},
+		{
+			"name": "Shopify",
+			"image": "images/skills/shopify.png"
+		},
+		{
+			"name": "ServiceNow",
+			"image": "images/skills/servicenow.png"
+		},
+		{
+			"name": "NodeJS",
+			"image": "images/skills/node.png"
+		},
+		{
+			"name": "Firebase",
+			"image": "images/skills/firebase.png"
+		},
+		{
+			"name": "MeteorJS",
+			"image": "images/skills/meteor.png"
+		},
+		{
+			"name": "MongoDB",
+			"image": "images/skills/mongodb.png"
+		},
+		{
+			"name": "MySQL",
+			"image": "images/skills/mysql.png"
+		},
+		{
+			"name": "GitHub",
+			"image": "images/skills/github.png"
+		},
+		{
+			"name": "Adobe Photoshop",
+			"image": "images/skills/ps.png"
+		},
+		{
+			"name": "Adobe Illustrator",
+			"image": "images/skills/ai.png"
+		}
+	],
+	"projects": [
+		{
+			"id": 1,
+			"name": "Aribabox",
+			"description": "Woodworking design e-commerce store",
+			"url": "https://www.aribabox.com/",
+			"image": "images/project/aribabox-website.jpg",
+			"technologies": ["Shopify"]
+		},
+		{
+			"id": 2,
+			"name": "JDK Mārupe",
+			"description": "Latvian folk dance group's website",
+			"url": "https://www.jdkmarupe.lv/",
+			"image": "images/project/jdkmarupe.jpg",
+			"technologies": ["Laravel", "JS"]
+		},
+		{
+			"id": 3,
+			"name": "Vārdulis",
+			"description": "Latvian \"Wordle\" clone",
+			"url": "https://vardulis.lv/",
+			"image": "images/project/vardulis.jpg",
+			"technologies": ["Expo.dev"]
+		},
+		{
+			"id": 4,
+			"name": "Strawberry",
+			"description": "ThreeJS test website",
+			"url": "https://strawberry.berzkalns.com/",
+			"image": "images/project/strawberry.jpg",
+			"technologies": ["ThreeJS"]
+		},
+		{
+			"id": 5,
+			"name": "3dconnect4",
+			"description": "3D Connect 4 game",
+			"url": "https://3dconnect4.berzkalns.com/",
+			"image": "images/project/3dconnect4.jpg",
+			"technologies": ["ThreeJS", "TypeScript", "Prisma", "NextJS"]
+		}
+	]
 }
