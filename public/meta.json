@@ -128,7 +128,15 @@
 			"description": "3D Connect 4 game",
 			"url": "https://3dconnect4.berzkalns.com/",
 			"image": "images/project/3dconnect4.jpg",
-			"technologies": ["ThreeJS", "TypeScript", "Prisma", "NextJS"]
+			"technologies": ["ThreeJS", "TypeScript", "ReactJS", "Prisma", "NextJS"]
+		},
+		{
+			"id": 6,
+			"name": "atom",
+			"description": "Atomic particle visualizations",
+			"url": "https://atom.berzkalns.com/",
+			"image": "images/project/atom.jpg",
+			"technologies": ["ThreeJS", "TypeScript", "ReactJS", "NextJS"]
 		}
 	]
 }
