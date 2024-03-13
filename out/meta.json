@@ -93,7 +93,7 @@
 		{
 			"id": 1,
 			"name": "Aribabox",
-			"description": "Woodworking design e-commerce store",
+			"description": "Woodworking design e-commerce store. It's a Shopify store with a customized theme. It is being used and gets clients every day.",
 			"url": "https://www.aribabox.com/",
 			"image": "images/project/aribabox-website.jpg",
 			"technologies": ["Shopify"]
@@ -101,40 +101,40 @@
 		{
 			"id": 2,
 			"name": "JDK Mārupe",
-			"description": "Latvian folk dance group's website",
+			"description": "Latvian folk dance group's website. First website I've ever made, for my at the time dance group. It's still up and running!",
 			"url": "https://www.jdkmarupe.lv/",
 			"image": "images/project/jdkmarupe.jpg",
-			"technologies": ["Laravel", "JS"]
+			"technologies": ["Laravel", "JavaScript", "PHP", "MySQL"]
 		},
 		{
 			"id": 3,
 			"name": "Vārdulis",
-			"description": "Latvian \"Wordle\" clone",
+			"description": "Latvian \"Wordle\" clone. Made in spare time as a fun project. It's a word guessing game where you have to guess a word in 5 tries. Had to figure out how to scrape a coherent list of words in latvian. It is being played by hundreds of people every day. ",
 			"url": "https://vardulis.lv/",
 			"image": "images/project/vardulis.jpg",
-			"technologies": ["Expo.dev"]
+			"technologies": ["Expo.dev (React Framework)"]
 		},
 		{
 			"id": 4,
 			"name": "Strawberry",
-			"description": "ThreeJS test website",
+			"description": "The first 3D project I've ever made. It's a 3D strawberry model with a simple animation. It's a simple project, but it was a big step for me in learning 3D web design.",
 			"url": "https://strawberry.berzkalns.com/",
 			"image": "images/project/strawberry.jpg",
 			"technologies": ["ThreeJS"]
 		},
 		{
 			"id": 5,
-			"name": "3dconnect4",
-			"description": "3D Connect 4 game",
+			"name": "3DConnect4",
+			"description": "It's a simple game, but was a good excercise to use Prisma with NextJS and implement real time player to player interactions.",
 			"url": "https://3dconnect4.berzkalns.com/",
 			"image": "images/project/3dconnect4.jpg",
 			"technologies": ["ThreeJS", "TypeScript", "ReactJS", "Prisma", "NextJS"]
 		},
 		{
 			"id": 6,
-			"name": "atom",
-			"description": "Atomic particle visualizations",
-			"url": "https://atom.berzkalns.com/",
+			"name": "ATOM",
+			"description": "A fun project for visualizing the periodic table atoms. It's a simple project that uses ThreeJS with ReactJS and NextJS.",
+			"url": "https://atom.berzkalns.com/atom/13",
 			"image": "images/project/atom.jpg",
 			"technologies": ["ThreeJS", "TypeScript", "ReactJS", "NextJS"]
 		}

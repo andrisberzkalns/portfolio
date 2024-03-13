@@ -1,25 +1,68 @@
 import React, { useState } from "react";
-import { Container, SimpleGrid, Box, Heading, Text, Image } from "@chakra-ui/react";
+import { Container, SimpleGrid, Box, Heading, Text, Image, List, ListItem, UnorderedList } from "@chakra-ui/react";
 import { AnimateSharedLayout, AnimatePresence, motion } from "framer-motion";
 import data from "@public/meta.json";
 import { SectionHeader } from "@components";
 
 export const Projects: React.FC = () => {
-
-  const [selectedId, setSelectedId] = useState(null);
-
-  return (
-    <Container maxW="container.lg" centerContent id="projects" mb={32} pt={16} mt={2}>
-      <SectionHeader>Projects</SectionHeader>
-      <SimpleGrid columns={{base: 1, md: 2}} spacing={12} px={{base: 2, md: 20}} my={20}>
-        {(data?.projects ?? []).map((project, index) => (
-          <a  key={project.name} href={project.url} target={'_blank'} rel="noreferrer">
-          <Box>
-            <Image rounded={'xl'} alt={project.name} layout="fill" src={project.image} boxShadow="xl" data-aos="fade-up" data-aos-duration="500" data-aos-delay={150 * ((index % 2) + 1) + 100}/>
-          </Box>
-          </a>
-        ))}
-      </SimpleGrid>
-    </Container>
-  );
+	return (
+		<Container maxW="container.2xl" centerContent id="projects" mb={8} pt={16} mt={2}>
+			<SectionHeader>Projects</SectionHeader>
+			<SimpleGrid columns={{ base: 1, lg: 2, xl: 3 }} autoColumns={"auto"} spacing={2} px={{ base: 2, md: 20 }} my={20}>
+				{(data?.projects ?? []).map((project, index) => (
+					<a key={project.name} href={project.url} target={"_blank"} rel="noreferrer">
+						<Box
+							style={{
+								position: "relative",
+							}}
+							boxShadow="xl"
+						>
+							<Image rounded={"xl"} alt={project.name} src={project.image} />
+							<Box
+								style={{
+									position: "absolute",
+									top: 0,
+									width: "100%",
+									transitionDuration: "0.4s",
+									height: "100%",
+									opacity: 0,
+								}}
+								_hover={{
+									backgroundColor: "rgba(255,255,255,0.95)",
+									opacity: "1 !important",
+									transitionDuration: "0.4s",
+								}}
+								borderRadius="xl"
+							>
+								{project.description && (
+									<Box p={4}>
+										<Heading size="md" color="black">
+											{project.name}
+										</Heading>
+										<Text color="black" mt={2}>
+											{project.description}
+										</Text>
+										{project.technologies && (
+											<Box mt={4}>
+												<UnorderedList color="black" style={{ lineHeight: "0.8" }}>
+													{project.technologies.map((tech, index) => {
+														// List of technologies used in the project
+														return (
+															<ListItem key={tech}>
+																<Text color="black">{tech}</Text>
+															</ListItem>
+														);
+													})}
+												</UnorderedList>
+											</Box>
+										)}
+									</Box>
+								)}
+							</Box>
+						</Box>
+					</a>
+				))}
+			</SimpleGrid>
+		</Container>
+	);
 };
