@@ -144,7 +144,7 @@
 		{
 			"id": 7,
 			"name": "Chocolate",
-			"description": "I like chocolate. So I decided to challenge myself and make a commercial astetique website for a chocolate brand. It's a simple project, but it was a good excercise in design and layout.",
+			"description": "I like chocolate. So I decided to challenge myself and make a commercial aesthetique website for a chocolate brand. It's a simple project, but it was a good excercise in design and layout.",
 			"url": "https://chocolate.berzkalns.com/",
 			"image": "images/project/chocolate.jpg",
 			"technologies": ["ThreeJS", "Drei", "TypeScript", "ReactJS", "NextJS"]
