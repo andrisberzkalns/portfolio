@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Box, Center, useTheme, Text, Image, useColorMode } from "@chakra-ui/react";
-import { useWindowSize, useMouse } from "react-use";
+import { useWindowSize, useMouse, useTween } from "react-use";
+import useSpring from "react-use/lib/useSpring";
 import { Button } from "@components";
 import { Link as ScrollLink } from "react-scroll";
 
@@ -14,8 +15,13 @@ export const Main: React.FC = () => {
 	const { width, height } = useWindowSize();
 	const { elX, elY } = useMouse(ref);
 
+	const sprintHoverPosition = useSpring(elX);
+	// const t = useTween("inCirc", 200, 0);
+	// console.log(t);
+
 	useEffect(() => {
 		if (canvasRef.current) {
+			// const sprintHoverPosition = elX;
 			const canvas = canvasRef.current;
 			const context = canvas.getContext("2d");
 			canvas.width = width;
@@ -23,20 +29,23 @@ export const Main: React.FC = () => {
 
 			context.fillStyle = "rgba(0,0,0,0.4)";
 			context.fillRect(0, 0, context.canvas.width, context.canvas.height); // (0,0) the top left of the canvas
-			context.clearRect(elX - LIGHT_SIZE / 2, 0, LIGHT_SIZE, context.canvas.height);
-			const grd = context.createLinearGradient(elX - LIGHT_SIZE / 2, 0, elX + LIGHT_SIZE / 2, 0);
+			context.clearRect(sprintHoverPosition - LIGHT_SIZE / 2, 0, LIGHT_SIZE, context.canvas.height);
+			const grd = context.createLinearGradient(sprintHoverPosition - LIGHT_SIZE / 2, 0, sprintHoverPosition + LIGHT_SIZE / 2, 0);
 			grd.addColorStop(0, "rgba(0,0,0,0.4)");
 			grd.addColorStop(0.5, "rgba(0,0,0,0)");
 			grd.addColorStop(1, "rgba(0,0,0,0.4)");
 
 			context.fillStyle = grd;
 			// context.fillStyle = 'rgba(0,0,0,0.15)';
-			context.fillRect(elX - LIGHT_SIZE / 2, 0, LIGHT_SIZE, context.canvas.height); // (0,0) the top left of the canvas
+			context.fillRect(sprintHoverPosition - LIGHT_SIZE / 2, 0, LIGHT_SIZE, context.canvas.height); // (0,0) the top left of the canvas
 			// context.fillRect(elX + 150, 0, -50, context.canvas.height);  // (0,0) the top left of the canvas
 			// context.fillStyle = 'rgba(0,0,0,0.15)';
 			// context.fillRect(elX - 100, 0, 100, context.canvas.height);  // (0,0) the top left of the canvas
 		}
-	}, [elX, elY, width, height]);
+	}, [elX, elY, width, height, sprintHoverPosition]);
+
+	// useEffect(() => {}, [hoverPosition]);
+	// console.log("sprintHoverPosition", sprintHoverPosition);
 
 	return (
 		<Box
