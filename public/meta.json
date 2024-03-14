@@ -6,21 +6,24 @@
 			"position": "Software Engineer",
 			"image": "images/experience/swedbank.jpg",
 			"dates": "2020 - present",
-			"description": "Risk and Compliance Platform department. Development and implementation in ServiceNow - GRC applications. \"Business Continuity Management\" application implementation. Custom application enhancement and maintenance. Developed a custom solution for standardized / styled PDF document generation. Continually improving development process by creating scripts and tools that bring value and helps improve the workflow for my team."
+			"description": "Risk and Compliance Platform department. Development and implementation in ServiceNow - GRC applications. \"Business Continuity Management\" application implementation. Custom application enhancement and maintenance. Developed a custom solution for standardized / styled PDF document generation. Continually improving development process by creating scripts and tools that bring value and helps improve the workflow for my team.",
+			"url": "https://www.swedbank.com/about-swedbank.html"
 		},
 		{
 			"name": "D8Corporation",
 			"position": "Programmer",
 			"image": "images/experience/d8.jpg",
 			"dates": "2019 - 2020",
-			"description": "Software development company. Banking related software maintenance and feature development. Work with NodeJS, ReactJS, Backbone, Jenkins, SQL"
+			"description": "Software development company. Banking related software maintenance and feature development. Work with NodeJS, ReactJS, Backbone, Jenkins, SQL",
+			"url": "https://www.d8corporation.com/"
 		},
 		{
 			"name": "Datu tehnoloģiju grupa",
 			"position": "Programming Technician",
 			"image": "images/experience/dtg.jpg",
 			"dates": "2018 - 2019",
-			"description": "Software and Hardware company. Development related to Worktime management software. User interface and server-side development. Primarily developed in JavaScript (React, Meteor, MongoDB). Hardware integration for facial recognition hardware in C#."
+			"description": "Software and Hardware company. Development related to Worktime management software. User interface and server-side development. Primarily developed in JavaScript (React, Meteor, MongoDB). Hardware integration for facial recognition hardware in C#.",
+			"url": "https://dtg.lv/"
 		}
 	],
 	"skills": [
@@ -137,6 +140,14 @@
 			"url": "https://atom.berzkalns.com/atom/13",
 			"image": "images/project/atom.jpg",
 			"technologies": ["ThreeJS", "TypeScript", "ReactJS", "NextJS"]
+		},
+		{
+			"id": 7,
+			"name": "Chocolate",
+			"description": "I like chocolate. So I decided to challenge myself and make a commercial astetique website for a chocolate brand. It's a simple project, but it was a good excercise in design and layout.",
+			"url": "https://chocolate.berzkalns.com/",
+			"image": "images/project/chocolate.jpg",
+			"technologies": ["ThreeJS", "Drei", "TypeScript", "ReactJS", "NextJS"]
 		}
 	]
 }

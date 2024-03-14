@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Center, Container, Divider, Flex, Heading, SimpleGrid, Text, Image } from "@chakra-ui/react";
 import { SectionHeader } from "@components";
 import data from "@public/meta.json";
+import { motion } from "framer-motion";
 
 export const Experience: React.FC = () => {
 	return (
@@ -19,17 +20,22 @@ export const Experience: React.FC = () => {
 									// data-aos-duration="500"
 									// data-aos-delay={150 * index}
 								>
-									<Box rounded={"xl"} w="100%" maxH={150} bg="white" display={{ base: "block", md: "none" }}>
-										<Center>
-											<Image p={4} maxH={150} src={experience.image} alt={experience.name} mr={{ base: 0, md: 8 }} />
-										</Center>
-									</Box>
-									<Center>
-										<Box rounded={"xl"} w={150} h={150} bg="white" display={{ base: "none", md: "block" }} mr={8}>
-											<Center w={150} h={150}>
-												<Image w={150} maxH={150} src={experience.image} alt={experience.name} />
+									<motion.a whileHover={{ scale: 1.2 }} style={{ cursor: "pointer" }} href={experience.url ? experience.url : ""} target="_blank">
+										<Box rounded={"xl"} w="100%" maxH={150} bg="white" display={{ base: "block", md: "none" }}>
+											<Center>
+												<Image p={4} maxH={150} src={experience.image} alt={experience.name} mr={{ base: 0, md: 8 }} />
 											</Center>
 										</Box>
+									</motion.a>
+									<Center>
+										<motion.a whileHover={{ scale: 1.6, translateX: -20 }} style={{ cursor: "pointer" }} href={experience.url ? experience.url : ""} target="_blank">
+											<Box rounded={"xl"} w={150} h={150} bg="white" display={{ base: "none", md: "block" }} mr={8}>
+												<Center w={150} h={150}>
+													<Image w={150} maxH={150} src={experience.image} alt={experience.name} />
+												</Center>
+											</Box>
+										</motion.a>
+
 										<Box key={experience.name} mt={{ base: 4, md: 0 }}>
 											{/* <Heading fontSize={18} fontWeight="500">
                         {experience.name}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Container, SimpleGrid, Box, Heading, Text, Image, List, ListItem, UnorderedList } from "@chakra-ui/react";
-import { AnimateSharedLayout, AnimatePresence, motion } from "framer-motion";
+import { Container, SimpleGrid, Box, Heading, Text, Image, Tag } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import data from "@public/meta.json";
 import { SectionHeader } from "@components";
 
@@ -8,7 +8,7 @@ export const Projects: React.FC = () => {
 	return (
 		<Container maxW="container.2xl" centerContent id="projects" mb={8} pt={16} mt={2}>
 			<SectionHeader>Projects</SectionHeader>
-			<SimpleGrid columns={{ base: 1, lg: 2, xl: 3 }} autoColumns={"auto"} spacing={2} px={{ base: 2, md: 20 }} my={20}>
+			<SimpleGrid columns={{ base: 1, lg: 2, xl: 3 }} spacing={2} px={{ base: 2, md: 20 }} my={20}>
 				{(data?.projects ?? []).map((project, index) => (
 					<a key={project.name} href={project.url} target={"_blank"} rel="noreferrer">
 						<Box
@@ -44,16 +44,22 @@ export const Projects: React.FC = () => {
 										</Text>
 										{project.technologies && (
 											<Box mt={4}>
-												<UnorderedList color="black" style={{ lineHeight: "0.8" }}>
-													{project.technologies.map((tech, index) => {
-														// List of technologies used in the project
-														return (
-															<ListItem key={tech}>
-																<Text color="black">{tech}</Text>
-															</ListItem>
-														);
-													})}
-												</UnorderedList>
+												{project.technologies.map((tech, index) => {
+													// List of technologies used in the project
+													return (
+														<motion.div key={tech} style={{ display: "inline-block" }} whileHover={{ translateY: -2 }}>
+															<Tag
+																style={{
+																	margin: "0.2rem",
+																}}
+																colorScheme="telegram"
+																shadow="md"
+															>
+																{tech}
+															</Tag>
+														</motion.div>
+													);
+												})}
 											</Box>
 										)}
 									</Box>
