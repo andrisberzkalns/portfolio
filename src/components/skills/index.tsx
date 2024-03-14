@@ -8,11 +8,11 @@ const ICON_SIZE = 100;
 
 export const Skills: React.FC = () => {
 	const { colorMode } = useColorMode();
-
+	console.log(data?.skills);
 	return (
-		<Container maxW="container.lg" centerContent mt={16} pt={16} id="skills">
+		<Container maxW="container.lg" centerContent mt={16} pb={16} id="skills">
 			<SectionHeader>Skills</SectionHeader>
-			<SimpleGrid columns={{ base: 2, sm: 3, md: 4, lg: 4 }} spacing={12} w="100%" mt={20}>
+			<SimpleGrid columns={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing={12} w="100%" mt={20}>
 				{(data?.skills ?? []).map((skill, index) => (
 					<Box key={skill.name}>
 						<motion.div whileHover={{ scale: 1.3, rotate: 10 }} whileTap={{ rotate: -10, borderRadius: "100%" }}>
@@ -34,8 +34,8 @@ export const Skills: React.FC = () => {
 											filter: "contrast(50%) blur(16px) brightness(100) opacity(0.3)",
 											mixBlendMode: "screen",
 										}}
-										maxW={{ base: ICON_SIZE / 1.5, md: ICON_SIZE }}
-										maxH={{ base: ICON_SIZE / 1.5, sm: ICON_SIZE }}
+										maxW={{ base: ICON_SIZE / 1.2, md: ICON_SIZE }}
+										maxH={{ base: ICON_SIZE / 1.2, sm: ICON_SIZE }}
 										p={2}
 										src={skill.image}
 										alt={skill.name}
@@ -45,8 +45,8 @@ export const Skills: React.FC = () => {
 											position: "absolute",
 											filter: "contrast(50%) blur(2px) brightness(0) opacity(0.5)",
 										}}
-										maxW={{ base: ICON_SIZE / 1.5, md: ICON_SIZE }}
-										maxH={{ base: ICON_SIZE / 1.5, sm: ICON_SIZE }}
+										maxW={{ base: ICON_SIZE / 1.2, md: ICON_SIZE }}
+										maxH={{ base: ICON_SIZE / 1.2, sm: ICON_SIZE }}
 										p={2}
 										src={skill.image}
 										alt={skill.name}
@@ -55,8 +55,8 @@ export const Skills: React.FC = () => {
 										style={{
 											zIndex: 1,
 										}}
-										maxW={{ base: ICON_SIZE / 1.5, md: ICON_SIZE }}
-										maxH={{ base: ICON_SIZE / 1.5, sm: ICON_SIZE }}
+										maxW={{ base: ICON_SIZE / 1.2, md: ICON_SIZE }}
+										maxH={{ base: ICON_SIZE / 1.2, sm: ICON_SIZE }}
 										p={2}
 										src={skill.image}
 										alt={skill.name}

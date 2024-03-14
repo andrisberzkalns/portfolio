@@ -56,6 +56,14 @@
 			"image": "images/skills/nextjs.png"
 		},
 		{
+			"name": "Expo.dev",
+			"image": "images/skills/expo.png"
+		},
+		{
+			"name": "MeteorJS",
+			"image": "images/skills/meteor.png"
+		},
+		{
 			"name": "ThreeJS",
 			"image": "images/skills/threejs.png"
 		},
@@ -72,10 +80,6 @@
 			"image": "images/skills/firebase.png"
 		},
 		{
-			"name": "MeteorJS",
-			"image": "images/skills/meteor.png"
-		},
-		{
 			"name": "MongoDB",
 			"image": "images/skills/mongodb.png"
 		},
@@ -84,12 +88,32 @@
 			"image": "images/skills/mysql.png"
 		},
 		{
+			"name": "PostreSQL",
+			"image": "images/skills/postgresql.png"
+		},
+		{
 			"name": "GitHub",
 			"image": "images/skills/github.png"
 		},
 		{
+			"name": "Docker",
+			"image": "images/skills/docker.png"
+		},
+		{
+			"name": "ChackraUI",
+			"image": "images/skills/chackra.png"
+		},
+		{
+			"name": "TailindCSS",
+			"image": "images/skills/tailwind.png"
+		},
+		{
 			"name": "Adobe Photoshop",
 			"image": "images/skills/ps.png"
+		},
+		{
+			"name": "DaVinci Resolve",
+			"image": "images/skills/davinciresolve.png"
 		}
 	],
 	"projects": [

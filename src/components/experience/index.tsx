@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export const Experience: React.FC = () => {
 	return (
-		<Container maxW="container.lg" centerContent mt={16} pt={16} mb={16} id="experience">
+		<Container maxW="container.lg" centerContent mt={32} mb={16} id="experience">
 			<SectionHeader>Experience</SectionHeader>
 			<Center h="100%" w="100%">
 				<Box mt={8}>
