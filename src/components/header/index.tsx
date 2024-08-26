@@ -1,5 +1,5 @@
-import React, { ReactNode, useState } from "react";
-import { Box, Button, Flex, HStack, Link, IconButton, Menu, Stack, useDisclosure, useColorMode } from "@chakra-ui/react";
+import React, { ReactNode } from "react";
+import { Box, Button, Flex, HStack, IconButton, Menu, Stack, useDisclosure, useColorMode } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { useWindowScroll, useWindowSize } from "react-use";
 import { Link as ScrollLink } from "react-scroll";
@@ -54,10 +54,7 @@ export const Header: React.FC = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const { y } = useWindowScroll();
 	const { height } = useWindowSize();
-	// const theme = useTheme()
 	const { colorMode, toggleColorMode } = useColorMode();
-	// const colorMode = "light";
-	// const toggleColorMode = () => {};
 
 	return (
 		<>

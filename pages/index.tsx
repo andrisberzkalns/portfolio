@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { Spacer, Flex } from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { Flex } from "@chakra-ui/react";
 import AOS from "aos";
-import { About, Contact, Experience, Footer, Header, Main, Projects, Skills, SpacerImage } from "@components";
+import { Contact, Experience, Footer, Header, Main, Projects, Skills } from "@components";
 import Head from "next/head";
 
 import "aos/dist/aos.css";

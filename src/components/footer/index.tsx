@@ -23,11 +23,6 @@ export const Footer: React.FC = () => {
 						</a>
 					</Box>
 					<Box mx={4}>
-						<a href="https://twitter.com/BerzkalnsAndris" target="_blank" style={iconStyle} rel="noreferrer">
-							<Image src="/icons/twitter-icon.png" alt="twitter" width="28px" height="28px" />
-						</a>
-					</Box>
-					<Box mx={4}>
 						<a href="https://www.linkedin.com/in/andris-b-584265a5/" target="_blank" style={iconStyle} rel="noreferrer">
 							<Image src="/icons/linkedin-icon.png" alt="linkedin" width="28px" height="28px" />
 						</a>

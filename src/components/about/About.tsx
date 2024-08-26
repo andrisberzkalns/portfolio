@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Container, Text } from "@chakra-ui/react";
-import data from "@public/meta.json";
 import { SectionHeader } from "@components";
 
 const About: React.FC = () => {

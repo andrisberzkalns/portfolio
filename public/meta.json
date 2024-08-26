@@ -2,10 +2,18 @@
 	"name": "portfolio",
 	"experiences": [
 		{
+			"name": "Giraffe360",
+			"position": "Senior Programmer",
+			"image": "images/experience/giraffe360.jpg",
+			"dates": "2024 - present",
+			"description": "Floor Plan team. Front-end web development and maintenance of Giraffe360's floor plan editor and related projects.",
+			"url": "https://www.giraffe360.com/company/about-us/"
+		},
+		{
 			"name": "Swedbank",
 			"position": "Software Engineer",
 			"image": "images/experience/swedbank.jpg",
-			"dates": "2020 - present",
+			"dates": "2020 - 2024",
 			"description": "Risk and Compliance Platform department. Development and implementation in ServiceNow - GRC applications. \"Business Continuity Management\" application implementation. Custom application enhancement and maintenance. Developed a custom solution for standardized / styled PDF document generation. Continually improving development process by creating scripts and tools that bring value and helps improve the workflow for my team.",
 			"url": "https://www.swedbank.com/about-swedbank.html"
 		},

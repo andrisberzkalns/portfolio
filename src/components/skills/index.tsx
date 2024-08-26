@@ -8,12 +8,11 @@ const ICON_SIZE = 100;
 
 export const Skills: React.FC = () => {
 	const { colorMode } = useColorMode();
-	console.log(data?.skills);
 	return (
 		<Container maxW="container.lg" centerContent mt={16} pb={16} id="skills">
 			<SectionHeader>Skills</SectionHeader>
 			<SimpleGrid columns={{ base: 2, sm: 3, md: 4, lg: 5 }} spacing={12} w="100%" mt={20}>
-				{(data?.skills ?? []).map((skill, index) => (
+				{(data?.skills ?? []).map((skill, ) => (
 					<Box key={skill.name}>
 						<motion.div whileHover={{ scale: 1.3, rotate: 10 }} whileTap={{ rotate: -10, borderRadius: "100%" }}>
 							<Box

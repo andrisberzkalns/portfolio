@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, SimpleGrid, Box, Heading, Text, Image, Tag } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import data from "@public/meta.json";
@@ -9,7 +9,7 @@ export const Projects: React.FC = () => {
 		<Container maxW="container.2xl" centerContent id="projects" mb={8} pt={16} mt={2}>
 			<SectionHeader>Projects</SectionHeader>
 			<SimpleGrid columns={{ base: 1, lg: 2, xl: 3 }} spacing={2} px={{ base: 2, md: 20 }} my={20}>
-				{(data?.projects ?? []).map((project, index) => (
+				{(data?.projects ?? []).map((project, ) => (
 					<a key={project.name} href={project.url} target={"_blank"} rel="noreferrer">
 						<Box
 							style={{
@@ -44,7 +44,7 @@ export const Projects: React.FC = () => {
 										</Text>
 										{project.technologies && (
 											<Box mt={4}>
-												{project.technologies.map((tech, index) => {
+												{project.technologies.map((tech, ) => {
 													// List of technologies used in the project
 													return (
 														<motion.div key={tech} style={{ display: "inline-block" }} whileHover={{ translateY: -2 }}>

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { Box, Center, useTheme, Text, Image, useColorMode } from "@chakra-ui/react";
-import { useWindowSize, useMouse, useTween } from "react-use";
+import { useWindowSize, useMouse } from "react-use";
 import useSpring from "react-use/lib/useSpring";
 import { Button } from "@components";
 import { Link as ScrollLink } from "react-scroll";
@@ -16,12 +16,9 @@ export const Main: React.FC = () => {
 	const { elX, elY } = useMouse(ref);
 
 	const sprintHoverPosition = useSpring(elX);
-	// const t = useTween("inCirc", 200, 0);
-	// console.log(t);
 
 	useEffect(() => {
 		if (canvasRef.current) {
-			// const sprintHoverPosition = elX;
 			const canvas = canvasRef.current;
 			const context = canvas.getContext("2d");
 			canvas.width = width;
@@ -36,16 +33,9 @@ export const Main: React.FC = () => {
 			grd.addColorStop(1, "rgba(0,0,0,0.4)");
 
 			context.fillStyle = grd;
-			// context.fillStyle = 'rgba(0,0,0,0.15)';
 			context.fillRect(sprintHoverPosition - LIGHT_SIZE / 2, 0, LIGHT_SIZE, context.canvas.height); // (0,0) the top left of the canvas
-			// context.fillRect(elX + 150, 0, -50, context.canvas.height);  // (0,0) the top left of the canvas
-			// context.fillStyle = 'rgba(0,0,0,0.15)';
-			// context.fillRect(elX - 100, 0, 100, context.canvas.height);  // (0,0) the top left of the canvas
 		}
 	}, [elX, elY, width, height, sprintHoverPosition]);
-
-	// useEffect(() => {}, [hoverPosition]);
-	// console.log("sprintHoverPosition", sprintHoverPosition);
 
 	return (
 		<Box
@@ -79,9 +69,7 @@ export const Main: React.FC = () => {
 					height: "100px",
 				}}
 			>
-				{/* <polygon fill="white" points="0,100 50,0 100,100"/> */}
 				<polygon fill={colorMode == "light" ? "white" : "rgb(26,32,44)"} points="0,0 50,100 100,0 100,100 0,100 0,0" />
-				{/* <polygon fill={"white"} points="0,0 50,100 100,0 100,100 0,100 0,0"/> */}
 			</svg>
 			<Center h="100%">
 				<Box data-aos="zoom-in">
@@ -100,23 +88,6 @@ export const Main: React.FC = () => {
 						</Button>
 					</ScrollLink>
 				</Box>
-				{/* <Box position="absolute" bottom={{base: 0, sm: 20}} _hover={{cursor: "pointer", transform: "translateY(5px)"}}>
-            <ScrollLink
-              activeClass="active"
-              to={'about'}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              style={{
-                padding: 5
-              }}
-            >
-              <Center>
-                <ArrowRightIcon style={{transform: "rotate(90deg)"}} color="white" w="6" h="6"/>
-              </Center>
-            </ScrollLink>
-          </Box> */}
 			</Center>
 		</Box>
 	);

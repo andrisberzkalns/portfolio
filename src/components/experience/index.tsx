@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, Container, Divider, Flex, Heading, SimpleGrid, Text, Image } from "@chakra-ui/react";
+import { Box, Center, Container, Divider, SimpleGrid, Text, Image } from "@chakra-ui/react";
 import { SectionHeader } from "@components";
 import data from "@public/meta.json";
 import { motion } from "framer-motion";
