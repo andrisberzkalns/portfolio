@@ -3,11 +3,18 @@ import { Flex } from "@chakra-ui/react";
 import AOS from "aos";
 import { Contact, Experience, Footer, Header, Main, Projects, Skills } from "@components";
 import Head from "next/head";
+import ReactGA from "react-ga4";
 
 import "aos/dist/aos.css";
 
 const Home: React.FC = () => {
 	useEffect(() => {
+		ReactGA.initialize([{
+			trackingId: "G-68LC5V0NGV",
+		}]);
+
+		ReactGA.send({ hitType: "pageview" });
+
 		AOS.init({
 			duration: 2000,
 		});
