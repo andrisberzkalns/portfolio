@@ -1,8 +1,14 @@
-# npm
 node_modules
-# next.js build files
-.next
-# environment variables
+.DS_Store
+dist
+dist-ssr
+*.local
+count.txt
 .env
-.env.*
-!.env.example
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+todos.json
+mcp-todos.json
