@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import type { PointerEvent } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { portfolioData, type Project } from '../../data/portfolio'
@@ -65,33 +66,121 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function ProjectsSection() {
   const scrollerRef = useRef<HTMLDivElement | null>(null)
+  const animationFrameRef = useRef<number | null>(null)
   const [isAtStart, setIsAtStart] = useState(true)
   const [isAtEnd, setIsAtEnd] = useState(false)
+  const [isSnapping, setIsSnapping] = useState(false)
+  const cancelScrollAnimation = useCallback(() => {
+    if (animationFrameRef.current !== null) {
+      cancelAnimationFrame(animationFrameRef.current)
+      animationFrameRef.current = null
+    }
+    setIsSnapping(false)
+  }, [])
+  const animateScrollTo = useCallback(
+    (target: number) => {
+      const scroller = scrollerRef.current
+      if (!scroller) {
+        return
+      }
+      cancelScrollAnimation()
+      const start = scroller.scrollLeft
+      if (Math.abs(target - start) < 1) {
+        setIsSnapping(false)
+        return
+      }
+      const duration = 300
+      let startTime: number | null = null
+      setIsSnapping(true)
+      const step = (timestamp: number) => {
+        if (startTime === null) {
+          startTime = timestamp
+        }
+        const elapsed = timestamp - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3)
+        scroller.scrollLeft = start + (target - start) * eased
+        if (progress < 1) {
+          animationFrameRef.current = requestAnimationFrame(step)
+        } else {
+          animationFrameRef.current = null
+          setIsSnapping(false)
+        }
+      }
+      animationFrameRef.current = requestAnimationFrame(step)
+    },
+    [cancelScrollAnimation],
+  )
+  const getScrollMetrics = useCallback(() => {
+    const scroller = scrollerRef.current
+    if (!scroller) {
+      return null
+    }
+    const firstCard = scroller.querySelector<HTMLElement>('[data-project-card]')
+    if (!firstCard) {
+      return null
+    }
+    const gap = parseFloat(getComputedStyle(scroller).columnGap || '0')
+    const step = firstCard.offsetWidth + gap
+    const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth
+    return { scroller, step, maxScrollLeft }
+  }, [])
+  const snapToIntent = useCallback(
+    (direction: 'next' | 'prev', currentScrollLeft?: number) => {
+      const metrics = getScrollMetrics()
+      if (!metrics) {
+        return
+      }
+      const { scroller, step, maxScrollLeft } = metrics
+      if (step <= 0) {
+        return
+      }
+      const current = currentScrollLeft ?? scroller.scrollLeft
+      const nextIndex =
+        direction === 'next'
+          ? Math.floor(current / step) + 1
+          : Math.ceil(current / step) - 1
+      const target = Math.min(Math.max(nextIndex * step, 0), maxScrollLeft)
+      animateScrollTo(target)
+    },
+    [animateScrollTo, getScrollMetrics],
+  )
   const {
     handlers: dragHandlers,
     isDragging,
     isPressed,
   } = useDragScroll({
     ignoreSelector: '[data-click-priority]',
+    onDragEnd: (payload) => {
+      if (!payload.hasDragged || payload.pointerType !== 'touch') {
+        return
+      }
+      const scrollDelta = payload.endScrollLeft - payload.startScrollLeft
+      if (Math.abs(scrollDelta) < 2) {
+        return
+      }
+      snapToIntent(scrollDelta > 0 ? 'next' : 'prev', payload.endScrollLeft)
+    },
   })
+  const pointerHandlers = {
+    ...dragHandlers,
+    onPointerDown: (event: PointerEvent<HTMLDivElement>) => {
+      cancelScrollAnimation()
+      dragHandlers.onPointerDown(event)
+    },
+  }
 
   const scrollByCard = (direction: 'next' | 'prev') => {
-    const scroller = scrollerRef.current
-    if (!scroller) {
+    const metrics = getScrollMetrics()
+    if (!metrics) {
       return
     }
-
-    const firstCard = scroller.querySelector<HTMLElement>('[data-project-card]')
-    if (!firstCard) {
-      return
-    }
-
-    const gap = parseFloat(getComputedStyle(scroller).columnGap || '0')
-    const delta = firstCard.offsetWidth + gap
-    scroller.scrollBy({
-      left: direction === 'next' ? delta : -delta,
-      behavior: 'smooth',
-    })
+    const { scroller, step, maxScrollLeft } = metrics
+    const target =
+      direction === 'next'
+        ? Math.min(scroller.scrollLeft + step, maxScrollLeft)
+        : Math.max(scroller.scrollLeft - step, 0)
+    animateScrollTo(target)
   }
 
   useEffect(() => {
@@ -165,10 +254,14 @@ export default function ProjectsSection() {
         </button>
         <div
           ref={scrollerRef}
-          {...dragHandlers}
+          {...pointerHandlers}
           className={cn(
             'items-stretch flex snap-x gap-6 overflow-x-auto py-4 hide-scrollbar select-none',
-            isDragging ? 'snap-none cursor-grabbing' : 'snap-mandatory',
+            isDragging
+              ? 'snap-none cursor-grabbing'
+              : isSnapping
+                ? 'snap-none'
+                : 'snap-mandatory',
             isPressed ? 'cursor-grabbing' : 'hover:cursor-grab',
           )}
           style={{ touchAction: 'pan-y' }}

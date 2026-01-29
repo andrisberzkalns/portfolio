@@ -4,6 +4,17 @@ import type { MouseEvent, PointerEvent } from 'react'
 type DragScrollOptions = {
   threshold?: number
   ignoreSelector?: string
+  onDragEnd?: (payload: DragEndPayload) => void
+}
+
+type DragEndPayload = {
+  deltaX: number
+  startX: number
+  endX: number
+  startScrollLeft: number
+  endScrollLeft: number
+  hasDragged: boolean
+  pointerType: PointerEvent<HTMLDivElement>['pointerType']
 }
 
 type DragScrollHandlers = {
@@ -16,7 +27,7 @@ type DragScrollHandlers = {
 }
 
 export function useDragScroll(options: DragScrollOptions = {}) {
-  const { threshold = 6, ignoreSelector } = options
+  const { threshold = 6, ignoreSelector, onDragEnd } = options
   const [isDragging, setIsDragging] = useState(false)
   const [hasDragged, setHasDragged] = useState(false)
   const [isPressed, setIsPressed] = useState(false)
@@ -85,9 +96,21 @@ export function useDragScroll(options: DragScrollOptions = {}) {
       if (event.currentTarget.hasPointerCapture(event.pointerId)) {
         event.currentTarget.releasePointerCapture(event.pointerId)
       }
+      if (isPressedRef.current && onDragEnd) {
+        const endX = event.clientX
+        onDragEnd({
+          deltaX: endX - startXRef.current,
+          startX: startXRef.current,
+          endX,
+          startScrollLeft: startScrollLeftRef.current,
+          endScrollLeft: event.currentTarget.scrollLeft,
+          hasDragged: hasDraggedRef.current,
+          pointerType: event.pointerType,
+        })
+      }
       resetDragState()
     },
-    [resetDragState],
+    [onDragEnd, resetDragState],
   )
 
   const onClickCapture = useCallback(
