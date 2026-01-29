@@ -424,7 +424,7 @@ export const portfolioData: {
       logoSrc: '/experience/giraffe360.jpg',
       logoAlt: 'Giraffe360 logo',
       summary:
-        'Floor Plan team.',
+        'Real estate media platform that turns property scans into floor plans, virtual tours, and listing-ready marketing assets.',
       highlights: [
         "Front-end web development and maintenance of Giraffe360's floor plan editor and related projects.",
       ],

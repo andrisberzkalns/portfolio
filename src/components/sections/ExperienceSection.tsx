@@ -11,7 +11,7 @@ export default function ExperienceSection() {
           </p>
         </div>
         <div className="relative">
-          <div className="absolute left-18 top-0 h-full w-px bg-slate-200" />
+          <div className="absolute left-18 top-0 hidden h-full w-px bg-slate-200 sm:block" />
           <div className="space-y-10">
             {portfolioData.experience.map((item) => {
               const periodParts = item.period.split(' - ')
@@ -21,10 +21,24 @@ export default function ExperienceSection() {
                   : periodParts
 
               return (
-                <article key={item.id} className="relative flex gap-6">
-                  <div className="flex w-36 flex-col items-center gap-5 pt-1">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-200 bg-white text-[11px] font-semibold text-slate-600 shadow-sm">
-                      <span className="text-center leading-tight">
+                <article
+                  key={item.id}
+                  className="relative flex flex-col gap-6 sm:flex-row"
+                >
+                  <div className="flex w-full flex-row items-center justify-start gap-4 sm:w-36 sm:flex-col sm:items-center sm:justify-center sm:gap-5 sm:pt-1">
+                    <div className="flex h-24 min-w-24 items-center justify-center rounded-lg border border-slate-200 bg-white px-2 text-sm font-semibold text-slate-600 shadow-sm sm:h-14 sm:w-14 sm:min-w-14 sm:rounded-full sm:px-0 sm:text-[11px]">
+                      <span className="text-center leading-tight sm:hidden">
+                        {periodParts.length === 2 ? (
+                          <>
+                            <span className="block">{periodParts[1]}</span>
+                            <span className="block text-slate-300">|</span>
+                            <span className="block">{periodParts[0]}</span>
+                          </>
+                        ) : (
+                          <span className="block">{item.period}</span>
+                        )}
+                      </span>
+                      <span className="hidden text-center leading-tight sm:block">
                         {displayParts.map((part) => (
                           <span key={part} className="block">
                             {part}
@@ -32,15 +46,15 @@ export default function ExperienceSection() {
                         ))}
                       </span>
                     </div>
-                    <div className="flex h-36 w-36 items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-md">
+                    <div className="flex h-24 flex-1 items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-md sm:h-36 sm:w-36 sm:flex-none">
                       <img
                         src={item.logoSrc}
                         alt={item.logoAlt ?? `${item.company} logo`}
-                        className="h-24 w-24 object-contain"
+                        className="h-full w-full object-contain p-3 sm:h-24 sm:w-24 sm:p-0"
                       />
                     </div>
                   </div>
-                  <div className="flex-1 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <div className="w-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:flex-1">
                     <div>
                       <h3 className="text-lg font-semibold text-slate-900">
                         {item.role}
